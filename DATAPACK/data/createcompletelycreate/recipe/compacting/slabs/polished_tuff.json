@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_tuff"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_tuff_slab"
+    },
+    {
+      "item": "minecraft:polished_tuff_slab"
+    }
+  ]
+}

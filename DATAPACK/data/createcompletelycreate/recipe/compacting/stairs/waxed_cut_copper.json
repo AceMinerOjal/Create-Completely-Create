@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:waxed_cut_copper",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:waxed_cut_copper_stairs"
+    },
+    {
+      "item": "minecraft:waxed_cut_copper_stairs"
+    },
+    {
+      "item": "minecraft:waxed_cut_copper_stairs"
+    },
+    {
+      "item": "minecraft:waxed_cut_copper_stairs"
+    }
+  ]
+}

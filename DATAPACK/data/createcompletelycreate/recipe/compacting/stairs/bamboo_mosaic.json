@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:bamboo_mosaic",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo_mosaic_stairs"
+    },
+    {
+      "item": "minecraft:bamboo_mosaic_stairs"
+    },
+    {
+      "item": "minecraft:bamboo_mosaic_stairs"
+    },
+    {
+      "item": "minecraft:bamboo_mosaic_stairs"
+    }
+  ]
+}

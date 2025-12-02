@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:waxed_weathered_cut_copper"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:waxed_weathered_cut_copper_slab"
+    },
+    {
+      "item": "minecraft:waxed_weathered_cut_copper_slab"
+    }
+  ]
+}

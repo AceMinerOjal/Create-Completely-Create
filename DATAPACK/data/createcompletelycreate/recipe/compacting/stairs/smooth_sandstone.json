@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:smooth_sandstone",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:smooth_sandstone_stairs"
+    },
+    {
+      "item": "minecraft:smooth_sandstone_stairs"
+    },
+    {
+      "item": "minecraft:smooth_sandstone_stairs"
+    },
+    {
+      "item": "minecraft:smooth_sandstone_stairs"
+    }
+  ]
+}

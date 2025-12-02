@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:birch_planks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:birch_slab"
+    },
+    {
+      "item": "minecraft:birch_slab"
+    }
+  ]
+}

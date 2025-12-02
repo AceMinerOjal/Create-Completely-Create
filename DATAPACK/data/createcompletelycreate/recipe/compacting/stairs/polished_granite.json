@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_granite",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_granite_stairs"
+    },
+    {
+      "item": "minecraft:polished_granite_stairs"
+    },
+    {
+      "item": "minecraft:polished_granite_stairs"
+    },
+    {
+      "item": "minecraft:polished_granite_stairs"
+    }
+  ]
+}

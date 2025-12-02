@@ -1,0 +1,17 @@
+{
+  "result": {
+    "id": "minecraft:birch_trapdoor",
+    "count": 10
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:birch_planks"
+    }
+  }
+}

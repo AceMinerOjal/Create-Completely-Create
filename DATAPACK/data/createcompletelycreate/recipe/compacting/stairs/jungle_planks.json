@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:jungle_planks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:jungle_stairs"
+    },
+    {
+      "item": "minecraft:jungle_stairs"
+    },
+    {
+      "item": "minecraft:jungle_stairs"
+    },
+    {
+      "item": "minecraft:jungle_stairs"
+    }
+  ]
+}

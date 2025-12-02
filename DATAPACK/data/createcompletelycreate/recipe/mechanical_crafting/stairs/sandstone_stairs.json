@@ -1,0 +1,26 @@
+{
+  "result": {
+    "id": "minecraft:sandstone_stairs",
+    "count": 12
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:sandstone"
+      },
+      {
+        "item": "minecraft:chiseled_sandstone"
+      },
+      {
+        "item": "minecraft:cut_sandstone"
+      }
+    ]
+  }
+}

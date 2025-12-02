@@ -1,0 +1,17 @@
+{
+  "result": {
+    "id": "minecraft:cherry_trapdoor",
+    "count": 10
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cherry_planks"
+    }
+  }
+}

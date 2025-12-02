@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_andesite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_andesite_slab"
+    },
+    {
+      "item": "minecraft:polished_andesite_slab"
+    }
+  ]
+}

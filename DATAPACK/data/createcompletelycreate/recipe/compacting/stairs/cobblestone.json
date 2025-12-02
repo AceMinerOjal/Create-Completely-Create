@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:cobblestone",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:cobblestone_stairs"
+    }
+  ]
+}

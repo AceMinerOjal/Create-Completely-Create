@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:crimson_planks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_slab"
+    },
+    {
+      "item": "minecraft:crimson_slab"
+    }
+  ]
+}

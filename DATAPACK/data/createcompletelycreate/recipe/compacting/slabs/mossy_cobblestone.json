@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:mossy_cobblestone"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:mossy_cobblestone_slab"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_slab"
+    }
+  ]
+}

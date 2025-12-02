@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_andesite",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_andesite_stairs"
+    },
+    {
+      "item": "minecraft:polished_andesite_stairs"
+    },
+    {
+      "item": "minecraft:polished_andesite_stairs"
+    },
+    {
+      "item": "minecraft:polished_andesite_stairs"
+    }
+  ]
+}

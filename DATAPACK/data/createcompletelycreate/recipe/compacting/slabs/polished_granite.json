@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_granite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_granite_slab"
+    },
+    {
+      "item": "minecraft:polished_granite_slab"
+    }
+  ]
+}

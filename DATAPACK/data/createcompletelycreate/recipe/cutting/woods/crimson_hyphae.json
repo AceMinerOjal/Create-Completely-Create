@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:crimson_hyphae"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:crimson_stem"
+}
+],
+"processing_time": 100
+}

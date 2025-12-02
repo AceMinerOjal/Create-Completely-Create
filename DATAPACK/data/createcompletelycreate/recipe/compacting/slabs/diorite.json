@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:diorite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:diorite_slab"
+    },
+    {
+      "item": "minecraft:diorite_slab"
+    }
+  ]
+}

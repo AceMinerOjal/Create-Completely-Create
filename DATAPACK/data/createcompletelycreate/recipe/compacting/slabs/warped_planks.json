@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:warped_planks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:warped_slab"
+    },
+    {
+      "item": "minecraft:warped_slab"
+    }
+  ]
+}

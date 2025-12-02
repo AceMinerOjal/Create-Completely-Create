@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:cut_sandstone"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cut_sandstone_slab"
+    },
+    {
+      "item": "minecraft:cut_sandstone_slab"
+    }
+  ]
+}

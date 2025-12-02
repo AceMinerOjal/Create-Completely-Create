@@ -1,0 +1,17 @@
+{
+  "result": {
+    "id": "minecraft:acacia_trapdoor",
+    "count": 10
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:acacia_planks"
+    }
+  }
+}

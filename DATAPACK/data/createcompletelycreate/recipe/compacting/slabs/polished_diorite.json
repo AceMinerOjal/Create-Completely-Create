@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_diorite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_diorite_slab"
+    },
+    {
+      "item": "minecraft:polished_diorite_slab"
+    }
+  ]
+}

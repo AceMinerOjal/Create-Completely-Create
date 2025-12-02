@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:mangrove_wood"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:mangrove_log"
+}
+],
+"processing_time": 100
+}

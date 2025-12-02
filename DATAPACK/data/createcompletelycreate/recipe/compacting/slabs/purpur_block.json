@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:purpur_block"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:purpur_slab"
+    },
+    {
+      "item": "minecraft:purpur_slab"
+    }
+  ]
+}

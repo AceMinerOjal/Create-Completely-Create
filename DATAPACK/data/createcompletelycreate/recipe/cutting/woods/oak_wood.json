@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:oak_wood"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:oak_log"
+}
+],
+"processing_time": 100
+}

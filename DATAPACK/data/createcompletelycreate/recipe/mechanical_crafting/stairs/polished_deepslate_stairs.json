@@ -1,0 +1,20 @@
+{
+  "result": {
+    "id": "minecraft:polished_deepslate_stairs",
+    "count": 12
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:polished_deepslate"
+      }
+    ]
+  }
+}

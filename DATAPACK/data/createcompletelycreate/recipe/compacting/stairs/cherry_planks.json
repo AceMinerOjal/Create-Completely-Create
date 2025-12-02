@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:cherry_planks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cherry_stairs"
+    },
+    {
+      "item": "minecraft:cherry_stairs"
+    },
+    {
+      "item": "minecraft:cherry_stairs"
+    },
+    {
+      "item": "minecraft:cherry_stairs"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:brick_slab"
+    },
+    {
+      "item": "minecraft:brick_slab"
+    }
+  ]
+}

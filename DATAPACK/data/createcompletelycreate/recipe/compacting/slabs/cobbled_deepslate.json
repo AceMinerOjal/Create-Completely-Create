@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:cobbled_deepslate"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cobbled_deepslate_slab"
+    },
+    {
+      "item": "minecraft:cobbled_deepslate_slab"
+    }
+  ]
+}

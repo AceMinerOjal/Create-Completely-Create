@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:stripped_jungle_wood"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:stripped_jungle_log"
+}
+],
+"processing_time": 100
+}
