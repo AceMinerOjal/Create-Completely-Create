@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:nether_bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_brick_slab"
+    },
+    {
+      "item": "minecraft:nether_brick_slab"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_dripstone_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_dripstone_brick_stairs"
+    },
+    {
+      "item": "create:cut_dripstone_brick_stairs"
+    },
+    {
+      "item": "create:cut_dripstone_brick_stairs"
+    },
+    {
+      "item": "create:cut_dripstone_brick_stairs"
+    }
+  ]
+}

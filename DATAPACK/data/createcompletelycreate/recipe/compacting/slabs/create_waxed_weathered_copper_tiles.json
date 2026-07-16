@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:waxed_weathered_copper_tiles"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:waxed_weathered_copper_tile_slab"
+    },
+    {
+      "item": "create:waxed_weathered_copper_tile_slab"
+    }
+  ]
+}

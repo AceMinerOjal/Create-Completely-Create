@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:small_scoria_bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:small_scoria_brick_slab"
+    },
+    {
+      "item": "create:small_scoria_brick_slab"
+    }
+  ]
+}

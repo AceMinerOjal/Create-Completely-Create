@@ -1,0 +1,15 @@
+{
+  "itemGroup.createcompletelycreate.main": "Create: Completely Create",
+  "block.createcompletelycreate.block_expeller": "Block Expeller",
+  "block.createcompletelycreate.block_expeller.tooltip.summary": "Uses _rotational force_ to generate blocks from two ingredients.",
+  "block.createcompletelycreate.block_expeller.tooltip.condition1": "Extruding",
+  "block.createcompletelycreate.block_expeller.tooltip.behaviour1": "Place _block ingredients_ on the _side_ and _below_ the extruder, and a _catalyst_ on _top_. Outputs can be extracted from _below_ via a _chute_ or collected via _right-click_.",
+  "block.createcompletelycreate.brass_block_expeller": "Brass Block Expeller",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.summary": "An advanced extruder that produces _more output_ per cycle and accepts _advanced recipes_.",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.condition1": "Extruding",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.behaviour1": "Place _block ingredients_ on the _side_ and _below_ the extruder, and a _catalyst_ on _top_. Outputs can be extracted from _below_ via a _chute_ or collected via _right-click_.",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.condition2": "Advanced",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.behaviour2": "Can process recipes that require _advanced extruding_, such as _obsidian_ and _snow_.",
+  "createcompletelycreate.ui.recipe_requirement.advanced_extruder.tooltip.title": "Requires Brass Block Expeller",
+  "createcompletelycreate.recipe.extruding": "Expelling"
+}

@@ -1,0 +1,22 @@
+{
+  "type": "createcompletelycreate:extruding",
+  "advanced": true,
+  "blockIngredients": {
+    "first": {
+      "blocks": "#createcompletelycreate:extruding/water_equivalents"
+    },
+    "second": {
+      "blocks": "minecraft:water"
+    }
+  },
+  "catalyst": {
+    "blocks": "#createcompletelycreate:extruding/ice_equivalents"
+  },
+  "consumeBlocks": {
+    "first": false,
+    "second": true
+  },
+  "result": {
+    "id": "minecraft:snow_block"
+  }
+}

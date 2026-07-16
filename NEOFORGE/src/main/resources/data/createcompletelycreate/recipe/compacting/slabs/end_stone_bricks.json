@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:end_stone_bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:end_stone_brick_slab"
+    },
+    {
+      "item": "minecraft:end_stone_brick_slab"
+    }
+  ]
+}

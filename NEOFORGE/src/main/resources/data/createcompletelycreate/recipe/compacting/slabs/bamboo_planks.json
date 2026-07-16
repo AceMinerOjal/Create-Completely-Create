@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:bamboo_planks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo_slab"
+    },
+    {
+      "item": "minecraft:bamboo_slab"
+    }
+  ]
+}

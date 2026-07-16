@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_deepslate",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_deepslate_stairs"
+    },
+    {
+      "item": "create:cut_deepslate_stairs"
+    },
+    {
+      "item": "create:cut_deepslate_stairs"
+    },
+    {
+      "item": "create:cut_deepslate_stairs"
+    }
+  ]
+}

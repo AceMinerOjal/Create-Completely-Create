@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:exposed_cut_copper",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:exposed_cut_copper_stairs"
+    },
+    {
+      "item": "minecraft:exposed_cut_copper_stairs"
+    },
+    {
+      "item": "minecraft:exposed_cut_copper_stairs"
+    },
+    {
+      "item": "minecraft:exposed_cut_copper_stairs"
+    }
+  ]
+}

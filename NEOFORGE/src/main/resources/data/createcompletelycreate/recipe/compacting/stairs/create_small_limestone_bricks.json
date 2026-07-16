@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:small_limestone_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:small_limestone_brick_stairs"
+    },
+    {
+      "item": "create:small_limestone_brick_stairs"
+    },
+    {
+      "item": "create:small_limestone_brick_stairs"
+    },
+    {
+      "item": "create:small_limestone_brick_stairs"
+    }
+  ]
+}

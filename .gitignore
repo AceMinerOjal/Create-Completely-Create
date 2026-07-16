@@ -1,0 +1,17 @@
+# NeoForge build artifacts
+NEOFORGE/build/
+NEOFORGE/bin/
+NEOFORGE/.gradle/
+
+# IDE files
+NEOFORGE/.eclipse/
+NEOFORGE/.settings/
+NEOFORGE/.classpath
+NEOFORGE/.project
+
+# Runtime directory
+NEOFORGE/run/
+
+# OS files
+.DS_Store
+Thumbs.db

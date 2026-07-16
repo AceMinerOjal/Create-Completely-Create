@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:small_veridium_bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:small_veridium_brick_slab"
+    },
+    {
+      "item": "create:small_veridium_brick_slab"
+    }
+  ]
+}

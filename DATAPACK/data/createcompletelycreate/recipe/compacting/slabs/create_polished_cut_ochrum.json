@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_ochrum"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_ochrum_slab"
+    },
+    {
+      "item": "create:polished_cut_ochrum_slab"
+    }
+  ]
+}

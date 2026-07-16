@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:quartz_block",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:quartz_stairs"
+    },
+    {
+      "item": "minecraft:quartz_stairs"
+    },
+    {
+      "item": "minecraft:quartz_stairs"
+    },
+    {
+      "item": "minecraft:quartz_stairs"
+    }
+  ]
+}

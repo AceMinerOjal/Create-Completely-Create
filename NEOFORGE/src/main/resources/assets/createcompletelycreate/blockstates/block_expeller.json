@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createcompletelycreate:block/block_expeller/block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createcompletelycreate:block/block_expeller/block"
+    },
+    "facing=south": {
+      "model": "createcompletelycreate:block/block_expeller/block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createcompletelycreate:block/block_expeller/block",
+      "y": 270
+    }
+  }
+}

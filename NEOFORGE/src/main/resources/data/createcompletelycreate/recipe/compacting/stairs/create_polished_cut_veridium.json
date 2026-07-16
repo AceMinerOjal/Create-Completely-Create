@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_veridium",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_veridium_stairs"
+    },
+    {
+      "item": "create:polished_cut_veridium_stairs"
+    },
+    {
+      "item": "create:polished_cut_veridium_stairs"
+    },
+    {
+      "item": "create:polished_cut_veridium_stairs"
+    }
+  ]
+}

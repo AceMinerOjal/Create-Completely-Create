@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:cherry_planks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cherry_slab"
+    },
+    {
+      "item": "minecraft:cherry_slab"
+    }
+  ]
+}

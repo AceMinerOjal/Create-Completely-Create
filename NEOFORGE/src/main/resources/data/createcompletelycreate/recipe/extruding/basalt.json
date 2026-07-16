@@ -1,0 +1,17 @@
+{
+  "type": "createcompletelycreate:extruding",
+  "blockIngredients": {
+    "first": {
+      "blocks": "#createcompletelycreate:extruding/lava_equivalents"
+    },
+    "second": {
+      "blocks": "minecraft:blue_ice"
+    }
+  },
+  "catalyst": {
+    "blocks": "minecraft:soul_soil"
+  },
+  "result": {
+    "id": "minecraft:basalt"
+  }
+}

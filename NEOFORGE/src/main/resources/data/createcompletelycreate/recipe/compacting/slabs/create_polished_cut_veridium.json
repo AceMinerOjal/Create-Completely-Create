@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_veridium"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_veridium_slab"
+    },
+    {
+      "item": "create:polished_cut_veridium_slab"
+    }
+  ]
+}

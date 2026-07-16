@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:waxed_copper_tiles",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:waxed_copper_tile_stairs"
+    },
+    {
+      "item": "create:waxed_copper_tile_stairs"
+    },
+    {
+      "item": "create:waxed_copper_tile_stairs"
+    },
+    {
+      "item": "create:waxed_copper_tile_stairs"
+    }
+  ]
+}

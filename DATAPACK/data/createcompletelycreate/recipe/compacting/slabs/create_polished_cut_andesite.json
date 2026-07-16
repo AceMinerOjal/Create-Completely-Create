@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_andesite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_andesite_slab"
+    },
+    {
+      "item": "create:polished_cut_andesite_slab"
+    }
+  ]
+}

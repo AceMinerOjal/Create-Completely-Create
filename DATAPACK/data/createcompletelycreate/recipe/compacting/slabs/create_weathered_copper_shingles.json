@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:weathered_copper_shingles"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:weathered_copper_shingle_slab"
+    },
+    {
+      "item": "create:weathered_copper_shingle_slab"
+    }
+  ]
+}

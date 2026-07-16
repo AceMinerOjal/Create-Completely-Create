@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:mangrove_planks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:mangrove_stairs"
+    },
+    {
+      "item": "minecraft:mangrove_stairs"
+    },
+    {
+      "item": "minecraft:mangrove_stairs"
+    },
+    {
+      "item": "minecraft:mangrove_stairs"
+    }
+  ]
+}

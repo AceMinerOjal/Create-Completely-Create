@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:small_veridium_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:small_veridium_brick_stairs"
+    },
+    {
+      "item": "create:small_veridium_brick_stairs"
+    },
+    {
+      "item": "create:small_veridium_brick_stairs"
+    },
+    {
+      "item": "create:small_veridium_brick_stairs"
+    }
+  ]
+}

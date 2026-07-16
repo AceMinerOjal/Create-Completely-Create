@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_tuff",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_tuff_stairs"
+    },
+    {
+      "item": "minecraft:polished_tuff_stairs"
+    },
+    {
+      "item": "minecraft:polished_tuff_stairs"
+    },
+    {
+      "item": "minecraft:polished_tuff_stairs"
+    }
+  ]
+}

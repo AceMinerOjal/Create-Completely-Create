@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:jungle_wood"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:jungle_log"
+}
+],
+"processing_time": 100
+}

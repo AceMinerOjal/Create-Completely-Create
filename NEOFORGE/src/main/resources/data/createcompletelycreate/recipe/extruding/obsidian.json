@@ -1,0 +1,22 @@
+{
+  "type": "createcompletelycreate:extruding",
+  "advanced": true,
+  "blockIngredients": {
+    "first": {
+      "blocks": "#createcompletelycreate:extruding/water_equivalents"
+    },
+    "second": {
+      "blocks": "minecraft:lava"
+    }
+  },
+  "catalyst": {
+    "blocks": "minecraft:obsidian"
+  },
+  "consumeBlocks": {
+    "first": false,
+    "second": true
+  },
+  "result": {
+    "id": "minecraft:obsidian"
+  }
+}

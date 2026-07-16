@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_dripstone"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_dripstone_slab"
+    },
+    {
+      "item": "create:polished_cut_dripstone_slab"
+    }
+  ]
+}

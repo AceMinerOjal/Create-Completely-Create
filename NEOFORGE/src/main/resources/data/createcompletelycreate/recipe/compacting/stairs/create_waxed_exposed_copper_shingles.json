@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:waxed_exposed_copper_shingles",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:waxed_exposed_copper_shingle_stairs"
+    },
+    {
+      "item": "create:waxed_exposed_copper_shingle_stairs"
+    },
+    {
+      "item": "create:waxed_exposed_copper_shingle_stairs"
+    },
+    {
+      "item": "create:waxed_exposed_copper_shingle_stairs"
+    }
+  ]
+}

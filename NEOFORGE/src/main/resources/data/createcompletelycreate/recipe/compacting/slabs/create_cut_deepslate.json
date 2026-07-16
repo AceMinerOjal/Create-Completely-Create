@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:cut_deepslate"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_deepslate_slab"
+    },
+    {
+      "item": "create:cut_deepslate_slab"
+    }
+  ]
+}

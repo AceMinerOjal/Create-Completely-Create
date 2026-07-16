@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:cut_asurine_bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_asurine_brick_slab"
+    },
+    {
+      "item": "create:cut_asurine_brick_slab"
+    }
+  ]
+}

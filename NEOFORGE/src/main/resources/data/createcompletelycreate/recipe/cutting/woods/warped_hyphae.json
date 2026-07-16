@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:warped_hyphae"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:warped_stem"
+}
+],
+"processing_time": 100
+}

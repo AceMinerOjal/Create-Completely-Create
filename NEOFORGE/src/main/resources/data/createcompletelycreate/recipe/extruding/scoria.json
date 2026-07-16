@@ -1,0 +1,14 @@
+{
+  "type": "createcompletelycreate:extruding",
+  "blockIngredients": {
+    "first": {
+      "blocks": "#createcompletelycreate:extruding/lava_equivalents"
+    },
+    "second": {
+      "blocks": "create:chocolate"
+    }
+  },
+  "result": {
+    "id": "create:scoria"
+  }
+}

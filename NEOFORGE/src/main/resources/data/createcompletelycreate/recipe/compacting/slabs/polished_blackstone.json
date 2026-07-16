@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_blackstone"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_blackstone_slab"
+    },
+    {
+      "item": "minecraft:polished_blackstone_slab"
+    }
+  ]
+}

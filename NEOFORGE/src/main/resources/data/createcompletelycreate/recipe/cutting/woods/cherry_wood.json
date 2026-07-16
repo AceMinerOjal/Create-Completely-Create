@@ -1,0 +1,14 @@
+{
+	"results": [
+{
+		"id": "minecraft:cherry_wood"
+}
+],
+	"type": "create:cutting",
+"ingredients": [
+{
+			"item": "minecraft:cherry_log"
+}
+],
+"processing_time": 100
+}

@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_scoria"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_scoria_slab"
+    },
+    {
+      "item": "create:polished_cut_scoria_slab"
+    }
+  ]
+}

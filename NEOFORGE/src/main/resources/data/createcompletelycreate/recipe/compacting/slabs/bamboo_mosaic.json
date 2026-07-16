@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:bamboo_mosaic"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo_mosaic_slab"
+    },
+    {
+      "item": "minecraft:bamboo_mosaic_slab"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "itemGroup.createcompletelycreate.main": "Create: Completely Create",
+  "block.createcompletelycreate.block_expeller": "Heaver",
+  "block.createcompletelycreate.block_expeller.tooltip.summary": "Uses _rotational force_ to conjure blocks from two ingredients.",
+  "block.createcompletelycreate.block_expeller.tooltip.condition1": "Heaving",
+  "block.createcompletelycreate.block_expeller.tooltip.behaviour1": "Place _block ingredients_ on the _side_ and _below_ the heaver, and a _catalyst_ on _top_. Outputs can be plundered from _below_ via a _chute_ or collected via _right-click_.",
+  "block.createcompletelycreate.brass_block_expeller": "Great Heaver",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.summary": "A grander heaver that produces _more booty_ per cycle and accepts _advanced heaving_.",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.condition1": "Heaving",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.behaviour1": "Place _block ingredients_ on the _side_ and _below_ the heaver, and a _catalyst_ on _top_. Outputs can be plundered from _below_ via a _chute_ or collected via _right-click_.",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.condition2": "Advanced Heaving",
+  "block.createcompletelycreate.brass_block_expeller.tooltip.behaviour2": "Can process recipes that require _advanced heaving_, such as _obsidian_ and _snow_.",
+  "createcompletelycreate.ui.recipe_requirement.advanced_extruder.tooltip.title": "Requires Great Heaver",
+  "createcompletelycreate.recipe.extruding": "Heavering"
+}

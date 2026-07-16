@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_tuff",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_tuff_stairs"
+    },
+    {
+      "item": "create:cut_tuff_stairs"
+    },
+    {
+      "item": "create:cut_tuff_stairs"
+    },
+    {
+      "item": "create:cut_tuff_stairs"
+    }
+  ]
+}

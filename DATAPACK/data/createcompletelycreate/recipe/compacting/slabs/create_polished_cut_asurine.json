@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_asurine"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_asurine_slab"
+    },
+    {
+      "item": "create:polished_cut_asurine_slab"
+    }
+  ]
+}

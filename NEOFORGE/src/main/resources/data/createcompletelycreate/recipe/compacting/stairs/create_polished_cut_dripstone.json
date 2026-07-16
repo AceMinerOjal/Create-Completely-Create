@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_dripstone",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_dripstone_stairs"
+    },
+    {
+      "item": "create:polished_cut_dripstone_stairs"
+    },
+    {
+      "item": "create:polished_cut_dripstone_stairs"
+    },
+    {
+      "item": "create:polished_cut_dripstone_stairs"
+    }
+  ]
+}

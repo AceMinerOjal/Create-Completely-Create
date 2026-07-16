@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:exposed_copper_tiles"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:exposed_copper_tile_slab"
+    },
+    {
+      "item": "create:exposed_copper_tile_slab"
+    }
+  ]
+}

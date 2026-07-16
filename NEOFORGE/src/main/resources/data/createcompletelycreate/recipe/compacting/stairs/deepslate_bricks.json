@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:deepslate_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_brick_stairs"
+    },
+    {
+      "item": "minecraft:deepslate_brick_stairs"
+    },
+    {
+      "item": "minecraft:deepslate_brick_stairs"
+    },
+    {
+      "item": "minecraft:deepslate_brick_stairs"
+    }
+  ]
+}

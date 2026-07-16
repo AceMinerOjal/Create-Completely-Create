@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:oxidized_copper_tiles"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:oxidized_copper_tile_slab"
+    },
+    {
+      "item": "create:oxidized_copper_tile_slab"
+    }
+  ]
+}

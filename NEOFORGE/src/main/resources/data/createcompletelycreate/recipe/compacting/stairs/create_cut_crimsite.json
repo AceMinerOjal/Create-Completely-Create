@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_crimsite",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_crimsite_stairs"
+    },
+    {
+      "item": "create:cut_crimsite_stairs"
+    },
+    {
+      "item": "create:cut_crimsite_stairs"
+    },
+    {
+      "item": "create:cut_crimsite_stairs"
+    }
+  ]
+}

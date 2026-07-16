@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:end_stone_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:end_stone_brick_stairs"
+    },
+    {
+      "item": "minecraft:end_stone_brick_stairs"
+    },
+    {
+      "item": "minecraft:end_stone_brick_stairs"
+    },
+    {
+      "item": "minecraft:end_stone_brick_stairs"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:mossy_stone_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:mossy_stone_brick_stairs"
+    },
+    {
+      "item": "minecraft:mossy_stone_brick_stairs"
+    },
+    {
+      "item": "minecraft:mossy_stone_brick_stairs"
+    },
+    {
+      "item": "minecraft:mossy_stone_brick_stairs"
+    }
+  ]
+}

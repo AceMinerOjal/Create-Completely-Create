@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_diorite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_diorite_slab"
+    },
+    {
+      "item": "create:polished_cut_diorite_slab"
+    }
+  ]
+}

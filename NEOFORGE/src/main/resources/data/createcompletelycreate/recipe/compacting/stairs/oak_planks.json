@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:oak_planks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:oak_stairs"
+    },
+    {
+      "item": "minecraft:oak_stairs"
+    },
+    {
+      "item": "minecraft:oak_stairs"
+    },
+    {
+      "item": "minecraft:oak_stairs"
+    }
+  ]
+}

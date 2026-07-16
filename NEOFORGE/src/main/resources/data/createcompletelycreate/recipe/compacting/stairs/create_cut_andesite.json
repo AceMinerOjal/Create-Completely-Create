@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_andesite",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_andesite_stairs"
+    },
+    {
+      "item": "create:cut_andesite_stairs"
+    },
+    {
+      "item": "create:cut_andesite_stairs"
+    },
+    {
+      "item": "create:cut_andesite_stairs"
+    }
+  ]
+}

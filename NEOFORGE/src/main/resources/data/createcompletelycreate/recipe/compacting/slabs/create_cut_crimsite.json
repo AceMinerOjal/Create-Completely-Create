@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:cut_crimsite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_crimsite_slab"
+    },
+    {
+      "item": "create:cut_crimsite_slab"
+    }
+  ]
+}

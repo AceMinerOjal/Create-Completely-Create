@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:blackstone",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:blackstone_stairs"
+    },
+    {
+      "item": "minecraft:blackstone_stairs"
+    },
+    {
+      "item": "minecraft:blackstone_stairs"
+    },
+    {
+      "item": "minecraft:blackstone_stairs"
+    }
+  ]
+}

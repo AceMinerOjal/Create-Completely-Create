@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_granite"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_granite_slab"
+    },
+    {
+      "item": "create:polished_cut_granite_slab"
+    }
+  ]
+}

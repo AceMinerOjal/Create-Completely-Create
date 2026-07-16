@@ -1,0 +1,18 @@
+{
+  "result": {
+    "id": "create:exposed_copper_tile_stairs",
+    "count": 12
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "create:exposed_copper_tiles"
+    }
+  }
+}

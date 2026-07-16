@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_ochrum",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_ochrum_stairs"
+    },
+    {
+      "item": "create:cut_ochrum_stairs"
+    },
+    {
+      "item": "create:cut_ochrum_stairs"
+    },
+    {
+      "item": "create:cut_ochrum_stairs"
+    }
+  ]
+}

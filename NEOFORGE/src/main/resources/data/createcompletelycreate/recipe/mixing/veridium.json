@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine"
+    },
+    {
+      "fluid": "minecraft:water",
+      "type": "fluid_stack",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "create:veridium"
+    }
+  ]
+}

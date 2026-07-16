@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:dark_prismarine",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:dark_prismarine_stairs"
+    },
+    {
+      "item": "minecraft:dark_prismarine_stairs"
+    },
+    {
+      "item": "minecraft:dark_prismarine_stairs"
+    },
+    {
+      "item": "minecraft:dark_prismarine_stairs"
+    }
+  ]
+}

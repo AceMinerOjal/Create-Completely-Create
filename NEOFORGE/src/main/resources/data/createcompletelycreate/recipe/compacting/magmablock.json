@@ -1,0 +1,18 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "fluid": "minecraft:lava",
+      "type": "fluid_stack",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:magma_block"
+    }
+  ]
+}

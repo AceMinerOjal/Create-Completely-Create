@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:prismarine_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_brick_stairs"
+    },
+    {
+      "item": "minecraft:prismarine_brick_stairs"
+    },
+    {
+      "item": "minecraft:prismarine_brick_stairs"
+    },
+    {
+      "item": "minecraft:prismarine_brick_stairs"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "createcompletelycreate:extruding",
+  "advanced": true,
+  "blockIngredients": {
+    "first": {
+      "blocks": "minecraft:water"
+    },
+    "second": {
+      "blocks": "minecraft:water"
+    }
+  },
+  "catalyst": {
+    "blocks": "minecraft:ice"
+  },
+  "consumeBlocks": {
+    "first": false,
+    "second": true
+  },
+  ],
+  "result": {
+    "id": "minecraft:snow_block"
+  }
+}

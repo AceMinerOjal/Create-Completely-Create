@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:small_granite_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:small_granite_brick_stairs"
+    },
+    {
+      "item": "create:small_granite_brick_stairs"
+    },
+    {
+      "item": "create:small_granite_brick_stairs"
+    },
+    {
+      "item": "create:small_granite_brick_stairs"
+    }
+  ]
+}

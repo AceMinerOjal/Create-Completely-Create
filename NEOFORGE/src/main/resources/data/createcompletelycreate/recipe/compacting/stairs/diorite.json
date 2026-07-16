@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:diorite",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:diorite_stairs"
+    },
+    {
+      "item": "minecraft:diorite_stairs"
+    },
+    {
+      "item": "minecraft:diorite_stairs"
+    },
+    {
+      "item": "minecraft:diorite_stairs"
+    }
+  ]
+}

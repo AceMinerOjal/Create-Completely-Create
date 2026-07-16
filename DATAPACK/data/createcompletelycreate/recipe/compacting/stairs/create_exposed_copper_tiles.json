@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:exposed_copper_tiles",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:exposed_copper_tile_stairs"
+    },
+    {
+      "item": "create:exposed_copper_tile_stairs"
+    },
+    {
+      "item": "create:exposed_copper_tile_stairs"
+    },
+    {
+      "item": "create:exposed_copper_tile_stairs"
+    }
+  ]
+}

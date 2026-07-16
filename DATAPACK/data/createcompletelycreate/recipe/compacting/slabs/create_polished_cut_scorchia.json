@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_scorchia"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_scorchia_slab"
+    },
+    {
+      "item": "create:polished_cut_scorchia_slab"
+    }
+  ]
+}

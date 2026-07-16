@@ -1,0 +1,18 @@
+{
+  "result": {
+    "id": "create:waxed_weathered_copper_shingle_stairs",
+    "count": 12
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "create:waxed_weathered_copper_shingles"
+    }
+  }
+}

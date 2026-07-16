@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:polished_deepslate",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:polished_deepslate_stairs"
+    },
+    {
+      "item": "minecraft:polished_deepslate_stairs"
+    },
+    {
+      "item": "minecraft:polished_deepslate_stairs"
+    },
+    {
+      "item": "minecraft:polished_deepslate_stairs"
+    }
+  ]
+}

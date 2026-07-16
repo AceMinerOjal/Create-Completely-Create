@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:mossy_stone_bricks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:mossy_stone_brick_slab"
+    },
+    {
+      "item": "minecraft:mossy_stone_brick_slab"
+    }
+  ]
+}

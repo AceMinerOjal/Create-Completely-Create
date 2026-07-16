@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:deepslate_tiles",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:deepslate_tile_stairs"
+    },
+    {
+      "item": "minecraft:deepslate_tile_stairs"
+    },
+    {
+      "item": "minecraft:deepslate_tile_stairs"
+    },
+    {
+      "item": "minecraft:deepslate_tile_stairs"
+    }
+  ]
+}

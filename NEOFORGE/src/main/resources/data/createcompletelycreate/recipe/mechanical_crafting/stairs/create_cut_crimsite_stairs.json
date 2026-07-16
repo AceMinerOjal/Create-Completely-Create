@@ -1,0 +1,18 @@
+{
+  "result": {
+    "id": "create:cut_crimsite_stairs",
+    "count": 12
+  },
+  "type": "create:mechanical_crafting",
+  "accept_mirrored": true,
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "create:cut_crimsite"
+    }
+  }
+}

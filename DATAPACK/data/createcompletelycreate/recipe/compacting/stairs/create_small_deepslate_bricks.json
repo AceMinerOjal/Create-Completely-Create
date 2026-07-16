@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:small_deepslate_bricks",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:small_deepslate_brick_stairs"
+    },
+    {
+      "item": "create:small_deepslate_brick_stairs"
+    },
+    {
+      "item": "create:small_deepslate_brick_stairs"
+    },
+    {
+      "item": "create:small_deepslate_brick_stairs"
+    }
+  ]
+}

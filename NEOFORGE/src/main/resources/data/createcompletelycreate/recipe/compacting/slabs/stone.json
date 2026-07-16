@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:stone"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:stone_slab"
+    },
+    {
+      "item": "minecraft:stone_slab"
+    }
+  ]
+}

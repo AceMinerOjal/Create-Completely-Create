@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "create:cut_scorchia",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:cut_scorchia_stairs"
+    },
+    {
+      "item": "create:cut_scorchia_stairs"
+    },
+    {
+      "item": "create:cut_scorchia_stairs"
+    },
+    {
+      "item": "create:cut_scorchia_stairs"
+    }
+  ]
+}

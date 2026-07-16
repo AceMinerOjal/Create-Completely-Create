@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:stone",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:stone_stairs"
+    },
+    {
+      "item": "minecraft:stone_stairs"
+    },
+    {
+      "item": "minecraft:stone_stairs"
+    },
+    {
+      "item": "minecraft:stone_stairs"
+    }
+  ]
+}

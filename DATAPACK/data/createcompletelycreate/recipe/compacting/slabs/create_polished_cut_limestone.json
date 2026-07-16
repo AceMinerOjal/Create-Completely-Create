@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "create:polished_cut_limestone"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "create:polished_cut_limestone_slab"
+    },
+    {
+      "item": "create:polished_cut_limestone_slab"
+    }
+  ]
+}

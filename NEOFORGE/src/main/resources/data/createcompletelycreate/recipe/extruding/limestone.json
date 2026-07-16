@@ -1,0 +1,14 @@
+{
+  "type": "createcompletelycreate:extruding",
+  "blockIngredients": {
+    "first": {
+      "blocks": "create:honey"
+    },
+    "second": {
+      "blocks": "#createcompletelycreate:extruding/lava_equivalents"
+    }
+  },
+  "result": {
+    "id": "create:limestone"
+  }
+}

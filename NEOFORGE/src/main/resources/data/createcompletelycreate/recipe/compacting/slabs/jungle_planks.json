@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "id": "minecraft:jungle_planks"
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:jungle_slab"
+    },
+    {
+      "item": "minecraft:jungle_slab"
+    }
+  ]
+}

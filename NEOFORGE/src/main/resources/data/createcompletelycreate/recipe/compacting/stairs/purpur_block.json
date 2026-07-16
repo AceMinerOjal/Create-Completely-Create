@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:purpur_block",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:purpur_stairs"
+    },
+    {
+      "item": "minecraft:purpur_stairs"
+    },
+    {
+      "item": "minecraft:purpur_stairs"
+    },
+    {
+      "item": "minecraft:purpur_stairs"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "id": "minecraft:mossy_cobblestone",
+      "count": 3
+    }
+  ],
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    }
+  ]
+}
