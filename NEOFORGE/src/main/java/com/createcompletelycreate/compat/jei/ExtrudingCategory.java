@@ -16,7 +16,6 @@ import com.simibubi.create.foundation.gui.AllGuiTextures;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.ingredient.IRecipeSlotRichTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
-import mezz.jei.api.neoforge.NeoForgeTypes;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import net.minecraft.ChatFormatting;
@@ -32,8 +31,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
-import net.neoforged.neoforge.fluids.FluidStack;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -105,12 +102,6 @@ public class ExtrudingCategory extends CreateRecipeCategory<ExtrudingRecipe> {
                 .collect(Collectors.toSet());
     }
 
-    public static Set<FluidStack> matchedFluidStacks(BlockPredicate predicate) {
-        return matchedFluids(predicate).stream()
-                .map(fluid -> new FluidStack(fluid, 1000))
-                .collect(Collectors.toSet());
-    }
-
     public static List<ItemStack> matchedItemStacks(BlockPredicate predicate) {
         if (isAny(predicate)) {
             return List.of();
@@ -123,6 +114,17 @@ public class ExtrudingCategory extends CreateRecipeCategory<ExtrudingRecipe> {
                 .toList();
     }
 
+    public static List<ItemStack> matchedDisplayStacks(BlockPredicate predicate) {
+        List<ItemStack> stacks = Lists.newArrayList(matchedItemStacks(predicate));
+        for (Fluid fluid : matchedFluids(predicate)) {
+            ItemStack bucket = fluid.getBucket().getDefaultInstance();
+            if (!bucket.isEmpty()) {
+                stacks.add(bucket);
+            }
+        }
+        return stacks;
+    }
+
     @Override
     protected void setRecipe(IRecipeLayoutBuilder builder, ExtrudingRecipe recipe, IFocusGroup focuses) {
         int slotIndex = 0;
@@ -130,17 +132,11 @@ public class ExtrudingCategory extends CreateRecipeCategory<ExtrudingRecipe> {
         int initY = 30;
         int distance = 42;
         for (int index = 0; index < 2; index++) {
-            List<ItemStack> itemStacks = matchedItemStacks(recipe.getBlockPredicateIngredients().get(index == 0));
-            if (!itemStacks.isEmpty()) {
-                builder.addSlot(RecipeIngredientRole.INPUT, initX + distance * slotIndex, initY).setBackground(getRenderedSlot(), -1, -1)
-                        .addItemStacks(itemStacks)
-                        .addRichTooltipCallback(addConsumeBlockTooltip(recipe.getConsumeBlocks().get(index == 0)));
-                slotIndex++;
-            }
-            Set<FluidStack> fluidIngredients = matchedFluidStacks(recipe.getBlockPredicateIngredients().get(index == 0));
-            if (!fluidIngredients.isEmpty()) {
-                builder.addSlot(RecipeIngredientRole.INPUT, initX + distance * slotIndex, initY).setBackground(getRenderedSlot(), -1, -1)
-                        .addIngredients(NeoForgeTypes.FLUID_STACK, fluidIngredients.stream().toList())
+            List<ItemStack> displayStacks = matchedDisplayStacks(recipe.getBlockPredicateIngredients().get(index == 0));
+            if (!displayStacks.isEmpty()) {
+                builder.addSlot(RecipeIngredientRole.INPUT, initX + distance * slotIndex, initY)
+                        .setBackground(getRenderedSlot(), -1, -1)
+                        .addItemStacks(displayStacks)
                         .addRichTooltipCallback(addConsumeBlockTooltip(recipe.getConsumeBlocks().get(index == 0)));
                 slotIndex++;
             }
@@ -149,7 +145,7 @@ public class ExtrudingCategory extends CreateRecipeCategory<ExtrudingRecipe> {
         if (recipe.getCatalyst().blocks().isPresent()) {
             builder.addSlot(RecipeIngredientRole.INPUT, 21, 5)
                     .setBackground(getRenderedSlot(), -1, -1)
-                    .addItemStacks(matchedItemStacks(recipe.getCatalyst()));
+                    .addItemStacks(matchedDisplayStacks(recipe.getCatalyst()));
         }
 
         ProcessingOutput output = recipe.getResult();

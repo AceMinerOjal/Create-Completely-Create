@@ -46,7 +46,7 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
     public abstract boolean isAdvancedMachine();
 
     // Output inventory that only accepts items produced internally by the extruder.
-    // insertItem is overridden to reject all external insertion — extraction is allowed.
+    // insertItem is overridden to reject all external insertion - extraction is allowed.
     private final ItemStackHandler outputInventory = new ItemStackHandler(1) {
         @Override
         public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {

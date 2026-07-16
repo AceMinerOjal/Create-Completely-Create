@@ -1,6 +1,12 @@
-# Changelog - Create: Completely Create Datapack
+# Changelog - Create: Completely Create
 
 ## v2.0.0
+
+### New Features (MOD ONLY)
+- Block Expeller and Brass Block Expeller
+- 7 extruding recipes (Stone, Cobblestone, Basalt, Limestone, Scoria, Obsidian, Snow Block)
+- JEI integration for extruding recipes with animated previews
+- Requirement system (min/max speed, min/max Y, biome tag, advanced extruder)
 
 ### New Recipes
 
@@ -16,6 +22,7 @@
 
 ### Changes
 - Updated Blackstone crushing recipe
+- Wither skeleton skull chance reduced from 1% to 0.1%
 - Updated pack.mcmeta to v2.0.0
 - Updated pack.png
 
@@ -26,7 +33,7 @@
 ### Added
 - Pressing: Stone -> Deepslate
 - Compacting: Cobblestone + Lava -> Magma Block
-- Crushing: Coarse Dirt -> Dirt + Grass Block
+- Crushing: Coarse Dirt -> Dirt
 - Mixing (heated): Basalt + Charcoal -> Gunpowder
 - Splashing: Rotten Flesh -> Leather, Magma Block -> Magma Cream
 - Haunting: Crying Obsidian

@@ -1,6 +1,6 @@
 # Create: Completely Create
 
-A [Create](https://modrinth.com/mod/create) addon for Minecraft 1.21.1 (NeoForge) that adds the **Block Expeller** — a kinetic machine that generates blocks from adjacent input blocks, similar to a generalized cobblestone generator.
+A [Create](https://modrinth.com/mod/create) addon for Minecraft 1.21.1 (NeoForge) that adds the **Block Expeller** - a kinetic machine that generates blocks from adjacent input blocks, similar to a generalized cobblestone generator.
 
 [![Modrinth](https://img.shields.io/badge/Modrinth-hGAlcCDJ-green?logo=modrinth)](https://modrinth.com/mod/create-completely-create)
 
@@ -19,11 +19,11 @@ A kinetic machine that generates blocks based on adjacent input blocks (left, ri
 
 All block generation is defined through data-driven JSON recipes, making it fully extensible via resource packs and data packs. Recipes support:
 
-- **Block ingredients** — the two side blocks (left/right of the machine)
-- **Catalyst** — a required block above the machine (not consumed)
-- **Multiple cycles** — configurable number of actuations before output
-- **Block consumption** — brass Block Expeller can consume side blocks after production
-- **Requirement system** — Y-level limits, speed constraints, biome tags, and more
+- **Block ingredients** - the two side blocks (left/right of the machine)
+- **Catalyst** - a required block above the machine (not consumed)
+- **Multiple cycles** - configurable number of actuations before output
+- **Block consumption** - brass Block Expeller can consume side blocks after production
+- **Requirement system** - Y-level limits, speed constraints, biome tags, and more
 
 See [`docs/extruding_recipes.md`](docs/extruding_recipes.md) for the full recipe format reference.
 
@@ -88,4 +88,4 @@ Supported languages: English, Korean, Japanese, Russian, Simplified Chinese, Tra
 
 ## License
 
-[LGPL-3.0](LICENCE) — Copyright (c) 2025 AceMinerOjal
+[LGPL-3.0](../LICENSE) - Copyright (c) 2025 AceMinerOjal
