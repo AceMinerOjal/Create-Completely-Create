@@ -54,6 +54,65 @@ Create-style automation for valuable items, including:
 
 - Golden apple enhancements
 
+## 🔧 MOD ONLY FEATURES
+
+The NeoForge mod version adds exclusive kinetic machines and a custom recipe system on top of all the datapack recipes.
+
+### Block Expeller (Andesite)
+
+A kinetic machine that generates blocks from two ingredients placed on its sides.
+
+- **Stress Impact:** 4.0 SU
+- Place a block on the **left** and **right** sides of the machine as ingredients
+- Optionally place a **catalyst** block on top
+- Set a **filter** on the front to choose the output
+- Output items are exposed below for automated extraction
+- Runs only **basic** extruding recipes
+
+### Brass Block Expeller
+
+An advanced version of the Block Expeller with higher throughput and recipe access.
+
+- **Stress Impact:** 16.0 SU
+- Runs **all** extruding recipes (basic + advanced)
+- Produces **8x output** per cycle (configurable)
+- Can **consume** ingredient blocks when processing advanced recipes
+- Requires more complex crafting with brass components
+
+### Extruding Recipes
+
+A custom recipe type (`createcompletelycreate:extruding`) with built-in recipes like:
+
+| Recipe | Inputs | Catalyst | Advanced |
+|--------|--------|----------|----------|
+| Cobblestone | Water + Lava | - | No |
+| Stone | Water + Lava | - | No |
+| Limestone | Honey + Lava | - | No |
+| Scoria | Lava + Chocolate | - | No |
+| Obsidian | Water + Lava | Obsidian | Yes |
+| Snow Block | Water + Water | Ice | Yes |
+| Basalt | Lava + Blue Ice | Soul Soil | No |
+
+### Recipe Requirements
+
+Extruding recipes can have conditional requirements:
+- **Y-level** constraints (min/max)
+- **Speed** constraints (min/max kinetic speed)
+- **Biome** tag matching
+- **Machine tier** (andesite-only or brass-only)
+- **Bonk count** (multi-cycle recipes)
+
+### JEI Integration
+
+Full JEI support with animated machine previews, recipe tooltips, and catalyst registration for both Block Expeller variants.
+
+### Config Options
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `cycleTime` | 240 ticks (12s) | Duration of one extruding cycle |
+| `brassOutputMultiplier` | 8 | Output multiplier for the brass variant |
+
 ### 🎯 Designed With Balance in Mind
 
 All recipes are crafted to be:
