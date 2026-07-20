@@ -56,7 +56,19 @@ Create-style automation for valuable items, including:
 
 ## 🔧 MOD ONLY FEATURES
 
+### Credits and Licensing
+
+- Original Project: [Create Mechanical Extruder](https://modrinth.com/mod/create-mechanical-extruder)
+- Creator: [oierbravo](https://modrinth.com/user/oierbravo)
+- License: GNU Lesser General Public License (LGPL)
+
 The NeoForge mod version adds exclusive kinetic machines and a custom recipe system on top of all the datapack recipes.
+
+### Main Changes from the Original
+
+- Removal of Recipes and creating better balancing
+- Adding shafts to the both sides and moving catalyst to the top so that items can be extracted using chutes from bottom making it tilable
+- Removal of the requirement for the [lib mod](https://modrinth.com/mod/mechanicals-lib)
 
 ### Block Expeller (Andesite)
 
@@ -83,19 +95,20 @@ An advanced version of the Block Expeller with higher throughput and recipe acce
 
 A custom recipe type (`createcompletelycreate:extruding`) with built-in recipes like:
 
-| Recipe | Inputs | Catalyst | Advanced |
-|--------|--------|----------|----------|
-| Cobblestone | Water + Lava | - | No |
-| Stone | Water + Lava | - | No |
-| Limestone | Honey + Lava | - | No |
-| Scoria | Lava + Chocolate | - | No |
-| Obsidian | Water + Lava | Obsidian | Yes |
-| Snow Block | Water + Water | Ice | Yes |
-| Basalt | Lava + Blue Ice | Soul Soil | No |
+| Recipe      | Inputs           | Catalyst  | Advanced |
+| ----------- | ---------------- | --------- | -------- |
+| Cobblestone | Water + Lava     | -         | No       |
+| Stone       | Water + Lava     | -         | No       |
+| Limestone   | Honey + Lava     | -         | No       |
+| Scoria      | Lava + Chocolate | -         | No       |
+| Obsidian    | Water + Lava     | Obsidian  | Yes      |
+| Snow Block  | Water + Water    | Ice       | Yes      |
+| Basalt      | Lava + Blue Ice  | Soul Soil | No       |
 
 ### Recipe Requirements
 
 Extruding recipes can have conditional requirements:
+
 - **Y-level** constraints (min/max)
 - **Speed** constraints (min/max kinetic speed)
 - **Biome** tag matching
@@ -108,10 +121,10 @@ Full JEI support with animated machine previews, recipe tooltips, and catalyst r
 
 ### Config Options
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `cycleTime` | 240 ticks (12s) | Duration of one extruding cycle |
-| `brassOutputMultiplier` | 8 | Output multiplier for the brass variant |
+| Option                  | Default         | Description                             |
+| ----------------------- | --------------- | --------------------------------------- |
+| `cycleTime`             | 240 ticks (12s) | Duration of one extruding cycle         |
+| `brassOutputMultiplier` | 8               | Output multiplier for the brass variant |
 
 ### 🎯 Designed With Balance in Mind
 
@@ -133,4 +146,3 @@ If you have any recommendations for any recipes, I am open to suggestions.
 
 You can also visit Modrinth for visual details of the recipes:
 https://modrinth.com/datapack/create-completely-create
-<img width="326" height="843" alt="image" src="https://github.com/user-attachments/assets/7d7e92bb-d368-47dd-a332-f81feec51881" />
