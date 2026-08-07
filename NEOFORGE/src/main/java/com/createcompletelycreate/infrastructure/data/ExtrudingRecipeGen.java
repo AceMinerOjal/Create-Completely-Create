@@ -2,6 +2,7 @@ package com.createcompletelycreate.infrastructure.data;
 
 import com.createcompletelycreate.components.extruder.recipe.ExtrudingRecipe;
 import com.createcompletelycreate.components.extruder.recipe.ExtrudingRecipeBuilder;
+import com.createcompletelycreate.infrastructure.config.ModConfigCondition;
 import net.createmod.catnip.data.Couple;
 import net.minecraft.advancements.critereon.BlockPredicate;
 import net.minecraft.core.HolderLookup;
@@ -56,6 +57,8 @@ public class ExtrudingRecipeGen extends RecipeProvider {
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
+        recipeOutput = recipeOutput.withConditions(new ModConfigCondition("recipes.extruding"));
+
         create("cobblestone", Items.COBBLESTONE)
                 .withBlockIngredients(WATER, LAVA)
                 .save(recipeOutput);

@@ -1,22 +1,20 @@
 package com.createcompletelycreate.components.extruder;
 
-import net.createmod.catnip.config.ConfigBase;
-import org.jetbrains.annotations.NotNull;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
-public class ExtruderConfigs extends ConfigBase {
-    private static final int VERSION = 1;
+public class ExtruderConfigs {
+    public final ModConfigSpec.IntValue cycleTime;
+    public final ModConfigSpec.IntValue brassOutputMultiplier;
 
-    public final ConfigInt cycleTime = i(240, "cycleTime", ExtruderConfigs.Comments.cycleTime);
-    public final ConfigInt brassOutputMultiplier = i(8, "brassOutputMultiplier", ExtruderConfigs.Comments.brassOutputMultiplier);
+    public ExtruderConfigs(ModConfigSpec.Builder builder) {
+        builder.comment("Mechanical Extruder Configs")
+                .push("block_expeller.v1");
 
-    private static class Comments {
-        static String cycleTime = "Duration of the extruding cycle, in ticks.";
-        static String brassOutputMultiplier = "Output multiplier for brass extruder";
+        cycleTime = builder.comment("Duration of the extruding cycle, in ticks.")
+                .defineInRange("cycleTime", 240, 1, 72000);
+        brassOutputMultiplier = builder.comment("Output multiplier for brass extruder")
+                .defineInRange("brassOutputMultiplier", 8, 1, 64);
+
+        builder.pop();
     }
-
-    @Override
-    public @NotNull String getName() {
-        return "block_expeller.v" + VERSION;
-    }
-
 }

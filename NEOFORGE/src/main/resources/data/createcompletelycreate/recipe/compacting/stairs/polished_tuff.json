@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.compacting"
+    }
+  ],
   "results": [
     {
       "id": "minecraft:polished_tuff",

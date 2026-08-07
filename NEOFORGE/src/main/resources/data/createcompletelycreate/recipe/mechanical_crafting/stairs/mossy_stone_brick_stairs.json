@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.mechanical_crafting"
+    }
+  ],
   "result": {
     "id": "minecraft:mossy_stone_brick_stairs",
     "count": 12

@@ -1,61 +1,47 @@
 package com.createcompletelycreate.infrastructure.config;
 
 import com.createcompletelycreate.ModConstants;
+import com.mojang.serialization.MapCodec;
 import com.simibubi.create.api.stress.BlockStressValues;
-import net.createmod.catnip.config.ConfigBase;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
+import net.neoforged.neoforge.common.conditions.ICondition;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.apache.commons.lang3.tuple.Pair;
 
-import java.util.EnumMap;
-import java.util.Map;
-import java.util.function.Supplier;
-
 public class ModConfigs {
-    private static final Map<ModConfig.Type, ConfigBase> CONFIGS = new EnumMap<>(ModConfig.Type.class);
+    public static final DeferredRegister<MapCodec<? extends ICondition>> CONDITION_CODECS =
+            DeferredRegister.create(NeoForgeRegistries.Keys.CONDITION_CODECS, ModConstants.MODID);
+
+    static {
+        CONDITION_CODECS.register("config_enabled", () -> ModConfigCondition.CODEC);
+    }
 
     private static ModConfigServer server;
+    private static ModConfigSpec serverSpec;
+
     public static ModConfigServer server() {
         return server;
     }
-    private static <T extends ConfigBase> T register(Supplier<T> factory, ModConfig.Type side) {
-        Pair<T, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure(builder -> {
-            T config = factory.get();
-            config.registerAll(builder);
-            return config;
-        });
 
-        T config = specPair.getLeft();
-        config.specification = specPair.getRight();
-        CONFIGS.put(side, config);
-        return config;
+    public static ModConfigSpec serverSpec() {
+        return serverSpec;
     }
+
     public static void register(ModContainer container) {
-        server = register(ModConfigServer::new, ModConfig.Type.SERVER);
+        Pair<ModConfigServer, ModConfigSpec> pair = new ModConfigSpec.Builder().configure(ModConfigServer::new);
+        server = pair.getLeft();
+        serverSpec = pair.getRight();
 
-        for (Map.Entry<ModConfig.Type, ConfigBase> pair : CONFIGS.entrySet())
-            container.registerConfig(pair.getKey(), pair.getValue().specification);
+        container.registerConfig(ModConfig.Type.SERVER, serverSpec);
 
-        ModStress stress = server().stressValues;
-        BlockStressValues.IMPACTS.registerProvider(stress::getImpact);
+        BlockStressValues.IMPACTS.registerProvider(server.stressValues::getImpact);
     }
 
-    @SubscribeEvent
-    public static void onLoad(ModConfigEvent.Loading event) {
-        for (ConfigBase config : CONFIGS.values())
-            if (config.specification == event.getConfig()
-                    .getSpec())
-                config.onLoad();
-    }
-
-    @SubscribeEvent
-    public static void onReload(ModConfigEvent.Reloading event) {
-        for (ConfigBase config : CONFIGS.values())
-            if (config.specification == event.getConfig()
-                    .getSpec())
-                config.onReload();
+    public static void registerConditionCodecs(IEventBus eventBus) {
+        CONDITION_CODECS.register(eventBus);
     }
 }

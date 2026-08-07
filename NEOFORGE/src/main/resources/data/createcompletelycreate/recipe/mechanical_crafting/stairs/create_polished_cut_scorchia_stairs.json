@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.mechanical_crafting"
+    }
+  ],
   "result": {
     "id": "create:polished_cut_scorchia_stairs",
     "count": 12

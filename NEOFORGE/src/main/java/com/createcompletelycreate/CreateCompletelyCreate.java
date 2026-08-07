@@ -10,13 +10,17 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
+import net.createmod.catnip.config.ui.BaseConfigScreen;
 import net.createmod.catnip.lang.FontHelper;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.function.Supplier;
 
 import static com.createcompletelycreate.ModConstants.MODID;
 
@@ -41,7 +45,10 @@ public class CreateCompletelyCreate {
         ModBlockEntities.register();
         ModCreativeTabs.register(modEventBus);
         ModConfigs.register(modContainer);
-        modEventBus.register(ModConfigs.class);
+        ModConfigs.registerConditionCodecs(modEventBus);
+
+        Supplier<IConfigScreenFactory> configScreen = () -> (container, parent) -> new BaseConfigScreen(parent, MODID);
+        modContainer.registerExtensionPoint(IConfigScreenFactory.class, configScreen);
 
         ModRecipes.register(modEventBus);
         ModRecipeRequirementTypes.init();

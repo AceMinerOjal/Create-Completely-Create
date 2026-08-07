@@ -5,10 +5,10 @@ import com.tterrag.registrate.builders.BlockBuilder;
 import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
 import it.unimi.dsi.fastutil.objects.Object2DoubleMap;
 import it.unimi.dsi.fastutil.objects.Object2DoubleOpenHashMap;
-import net.createmod.catnip.config.ConfigBase;
 import net.createmod.catnip.registry.RegisteredObjectsHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.common.ModConfigSpec.Builder;
 import net.neoforged.neoforge.common.ModConfigSpec.ConfigValue;
 import org.jetbrains.annotations.Nullable;
@@ -17,24 +17,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.DoubleSupplier;
 
-public class ModStress extends ConfigBase {
-	private static final int VERSION = 1;
-
+public class ModStress {
 	private static final Object2DoubleMap<ResourceLocation> DEFAULT_IMPACTS = new Object2DoubleOpenHashMap<>();
 
 	protected final Map<ResourceLocation, ConfigValue<Double>> impacts = new HashMap<>();
 
-	@Override
-	public void registerAll(Builder builder) {
+	public ModStress(Builder builder) {
 		builder.comment(".", Comments.su, Comments.impact)
-			.push("impact");
+				.push("impact");
 		DEFAULT_IMPACTS.forEach((id, value) -> this.impacts.put(id, builder.define(id.getPath(), value)));
 		builder.pop();
-	}
-
-	@Override
-	public String getName() {
-		return "stressValues.v" + VERSION;
 	}
 
 	@Nullable
@@ -55,7 +47,7 @@ public class ModStress extends ConfigBase {
 	private static class Comments {
 		static String su = "[in Stress Units]";
 		static String impact =
-			"Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.";
+				"Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.";
 	}
 
 }

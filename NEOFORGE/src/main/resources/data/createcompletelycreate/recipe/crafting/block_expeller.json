@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.crafting"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {

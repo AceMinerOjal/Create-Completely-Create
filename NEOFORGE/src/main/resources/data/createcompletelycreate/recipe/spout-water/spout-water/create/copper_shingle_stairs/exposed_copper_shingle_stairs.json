@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.spout-water"
+    }
+  ],
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create:copper_shingle_stairs"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 250,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "id": "create:exposed_copper_shingle_stairs"
+      }
+    }
+  ]
+}
