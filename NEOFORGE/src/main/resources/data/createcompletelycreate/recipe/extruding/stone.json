@@ -3,6 +3,10 @@
     {
       "type": "createcompletelycreate:config_enabled",
       "path": "recipes.extruding"
+    },
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "extruding.stone"
     }
   ],
   "type": "createcompletelycreate:extruding",

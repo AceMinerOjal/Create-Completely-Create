@@ -3,6 +3,10 @@
     {
       "type": "createcompletelycreate:config_enabled",
       "path": "recipes.extruding"
+    },
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "extruding.obsidian"
     }
   ],
   "type": "createcompletelycreate:extruding",

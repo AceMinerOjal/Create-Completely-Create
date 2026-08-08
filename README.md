@@ -18,6 +18,8 @@ Adds new recipes for many overlooked vanilla blocks and items using Create's exi
 
 - Milling alternatives
 
+- Spout-water copper oxidation (Exposed, Weathered, Oxidized variants)
+
 - Compact crafting chains for advanced resources
 
 ### 🧱 Building & Decorative Block Automation
@@ -104,6 +106,9 @@ A custom recipe type (`createcompletelycreate:extruding`) with built-in recipes 
 | Obsidian    | Water + Lava     | Obsidian  | Yes      |
 | Snow Block  | Water + Water    | Ice       | Yes      |
 | Basalt      | Lava + Blue Ice  | Soul Soil | No       |
+| Calcite     | Levitite + Lava  | -         | No       |
+
+> **Calcite** requires the [Aeronautics](https://modrinth.com/mod/aeronautics) mod to be installed.
 
 ### Recipe Requirements
 
@@ -121,10 +126,15 @@ Full JEI support with animated machine previews, recipe tooltips, and catalyst r
 
 ### Config Options
 
-| Option                  | Default         | Description                             |
-| ----------------------- | --------------- | --------------------------------------- |
-| `cycleTime`             | 240 ticks (12s) | Duration of one extruding cycle         |
-| `brassOutputMultiplier` | 8               | Output multiplier for the brass variant |
+The server config (`createcompletelycreate-server.toml`) is editable in-game from the pause menu via the Create-style config screen.
+
+| Option                           | Default     | Description                             |
+| -------------------------------- | ----------- | --------------------------------------- |
+| `block_expeller.v1.cycleTime`    | 240 ticks (12s) | Duration of one extruding cycle     |
+| `block_expeller.v1.brassOutputMultiplier` | 8 | Output multiplier for the brass variant |
+| `recipes.<category>`             | true        | Toggle a whole recipe category (compacting, crafting, crushing, cutting, extruding, haunting, mechanical_crafting, milling, mixing, pressing, splashing, spout-water) |
+| `extruding.<recipe>`             | true        | Toggle an individual extruding recipe (cobblestone, stone, limestone, scoria, obsidian, snow_block, basalt, calcite) |
+| `impact.<block>`                 | per block   | Configure the individual stress impact of mechanical blocks |
 
 ### 🎯 Designed With Balance in Mind
 

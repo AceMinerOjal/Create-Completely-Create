@@ -6,22 +6,23 @@
     },
     {
       "type": "createcompletelycreate:config_enabled",
-      "path": "extruding.basalt"
+      "path": "extruding.calcite"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aeronautics"
     }
   ],
   "type": "createcompletelycreate:extruding",
   "blockIngredients": {
     "first": {
-      "blocks": "#createcompletelycreate:extruding/lava_equivalents"
+      "blocks": "#createcompletelycreate:extruding/levitite_equivalents"
     },
     "second": {
-      "blocks": "minecraft:blue_ice"
+      "blocks": "#createcompletelycreate:extruding/lava_equivalents"
     }
   },
-  "catalyst": {
-    "blocks": "minecraft:soul_soil"
-  },
   "result": {
-    "id": "minecraft:basalt"
+    "id": "minecraft:calcite"
   }
 }

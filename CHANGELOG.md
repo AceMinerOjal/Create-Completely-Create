@@ -1,5 +1,28 @@
 # Changelog - Create: Completely Create
 
+## v2.1.0
+
+### New Recipes
+
+#### Spout-Water (Copper Oxidation)
+- Spout water onto copper to advance its oxidation stage (Exposed -> Weathered -> Oxidized)
+- Minecraft: Copper Block, Cut Copper (block/slab/stairs), Chiseled Copper, Copper Bulb, Copper Door, Copper Grate, Copper Trapdoor
+- Create: Copper Shingles and Copper Tiles (block/slab/stairs)
+
+### New Features (MOD ONLY)
+- In-game config screen for the server config (Create-style, accessible from the pause menu)
+- Per-category recipe toggles: every NeoForge recipe is gated behind `createcompletelycreate:config_enabled` so whole categories can be disabled in-game
+- Per-recipe extruding toggles for all 8 extruding recipes
+- New extruding recipe: Calcite (Levitite Blend/Levitite + Lava) - requires the Aeronautics mod
+
+### Changes
+- Replaced the catnip client/server config with a server-only NeoForge ModConfigSpec
+- Extruding datagen now emits per-recipe config conditions
+- Datagen output moved to `build/datagen` with a `copyGeneratedExtruding` task to sync extruding recipes
+- Updated pack.mcmeta to v2.1.0
+
+---
+
 ## v2.0.0
 
 ### New Features (MOD ONLY)

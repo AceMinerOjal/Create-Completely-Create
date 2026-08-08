@@ -63,7 +63,7 @@ neoForge {
         data {
             data()
             gameDirectory = project.file('run')
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/main/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('build/datagen/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
         configureEach {
             systemProperty 'forge.logging.markers', ''
@@ -107,6 +107,12 @@ dependencies {
 
     compileOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}+${curios_minecraft_version}:api")
     runtimeOnly("top.theillusivec4.curios:curios-neoforge:${curios_version}+${curios_minecraft_version}")
+}
+
+tasks.register('copyGeneratedExtruding', Sync) {
+    dependsOn 'runData'
+    from 'build/datagen/data/createcompletelycreate/recipe/extruding'
+    into 'src/main/resources/data/createcompletelycreate/recipe/extruding'
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
