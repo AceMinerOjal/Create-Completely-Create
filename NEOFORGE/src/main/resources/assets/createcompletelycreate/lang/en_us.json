@@ -11,5 +11,12 @@
   "block.createcompletelycreate.brass_block_expeller.tooltip.condition2": "Advanced",
   "block.createcompletelycreate.brass_block_expeller.tooltip.behaviour2": "Can process recipes that require _advanced extruding_, such as _obsidian_ and _snow_.",
   "createcompletelycreate.ui.recipe_requirement.advanced_extruder.tooltip.title": "Requires Brass Block Expeller",
-  "createcompletelycreate.recipe.extruding": "Expelling"
+  "createcompletelycreate.recipe.extruding": "Expelling",
+  "item.createcompletelycreate.shadow_steel_paxel": "Shadow Steel Paxel",
+  "item.createcompletelycreate.refined_radiance_paxel": "Refined Radiance Paxel",
+  "item.createcompletelycreate.shadow_radiance_paxel": "Shadow Radiance Paxel",
+  "createcompletelycreate.paxel.selected": "Selected ability: %s",
+  "item.createcompletelycreate.shadow_steel_paxel.tooltip.summary": "A combined _pickaxe_, _axe_ and _shovel_ built from Create: Quality of Life materials.",
+  "item.createcompletelycreate.refined_radiance_paxel.tooltip.summary": "A combined _pickaxe_, _axe_ and _shovel_ built from Create: Quality of Life materials.",
+  "item.createcompletelycreate.shadow_radiance_paxel.tooltip.summary": "A combined _pickaxe_, _axe_ and _shovel_ built from Create: Quality of Life materials."
 }

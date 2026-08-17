@@ -30,3 +30,10 @@ type="required"
 versionRange="${create_version_range}"
 ordering="AFTER"
 side="BOTH"
+
+[[dependencies."${mod_id}"]]
+modId="createqol"
+type="optional"
+versionRange="[1.6.0,)"
+ordering="AFTER"
+side="BOTH"

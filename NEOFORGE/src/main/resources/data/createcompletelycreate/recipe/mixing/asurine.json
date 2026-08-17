@@ -8,17 +8,26 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "item": "minecraft:prismarine"
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "item": "minecraft:prismarine_shards"
     },
     {
       "fluid": "minecraft:water",
-      "type": "fluid_stack",
+      "type": "neoforge:single",
       "amount": 100
     }
   ],
   "results": [
     {
-      "id": "create:veridium"
+      "id": "create:asurine"
     }
   ]
 }

@@ -19,6 +19,7 @@ import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.pattern.BlockInWorld;
 import org.jetbrains.annotations.NotNull;
@@ -79,7 +80,7 @@ public class ExtrudingRecipe implements Recipe<RecipeInput> {
             return blockIngredient.matches(blockInWorld);
         if (blockInWorld.getState().hasProperty(WATERLOGGED) && blockInWorld.getState().getValue(WATERLOGGED)) {
             boolean isWaterOnly = blockIngredient.blocks().get().size() == 1
-                    && blockIngredient.blocks().get().get(0).is(Blocks.WATER.builtInRegistryHolder().key().location());
+                    && blockIngredient.blocks().get().get(0).is(BuiltInRegistries.BLOCK.getKey(Blocks.WATER));
             if (isWaterOnly && blockIngredient.properties().isEmpty() && blockIngredient.nbt().isEmpty()) {
                 return true;
             }
@@ -258,5 +259,24 @@ public class ExtrudingRecipe implements Recipe<RecipeInput> {
 
     public Couple<BlockPredicate> getBlockPredicateIngredients() {
         return blockPredicateIngredients;
+    }
+
+    public Couple<Boolean> getBlocksToConsume(Couple<BlockInWorld> sideBlocks) {
+        BlockInWorld left = sideBlocks.getFirst();
+        BlockInWorld right = sideBlocks.getSecond();
+        BlockPredicate first = blockPredicateIngredients.getFirst();
+        BlockPredicate second = blockPredicateIngredients.getSecond();
+
+        boolean consumeLeft = false, consumeRight = false;
+
+        if (matchIngredient(first, left) && matchIngredient(second, right)) {
+            if (consumeBlocks.getFirst()) consumeLeft = true;
+            if (consumeBlocks.getSecond()) consumeRight = true;
+        } else if (matchIngredient(second, left) && matchIngredient(first, right)) {
+            if (consumeBlocks.getSecond()) consumeLeft = true;
+            if (consumeBlocks.getFirst()) consumeRight = true;
+        }
+
+        return Couple.create(consumeLeft, consumeRight);
     }
 }

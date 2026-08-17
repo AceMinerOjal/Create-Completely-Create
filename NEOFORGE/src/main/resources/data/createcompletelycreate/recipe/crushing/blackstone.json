@@ -14,11 +14,8 @@
   ],
   "results": [
     {
-      "id": "minecraft:tuff"
-    },
-    {
       "id": "minecraft:wither_skeleton_skull",
-      "chance": 0.001,
+      "chance": 0.0005,
       "count": 1
     }
   ]

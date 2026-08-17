@@ -1,6 +1,7 @@
 package com.createcompletelycreate.components.extruder;
 
 import com.createcompletelycreate.ModLang;
+import com.createcompletelycreate.components.extruder.ExtruderConfigs;
 import com.createcompletelycreate.components.extruder.recipe.ExtrudingRecipe;
 import com.createcompletelycreate.foundation.blockEntity.behaviour.CycleBehavior;
 import com.createcompletelycreate.foundation.register.ModRecipeRequirementTypes;
@@ -11,7 +12,6 @@ import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
 import com.simibubi.create.foundation.blockEntity.behaviour.filtering.FilteringBehaviour;
 import net.createmod.catnip.data.Couple;
-import net.minecraft.advancements.critereon.BlockPredicate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -44,6 +44,12 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
     protected float headOffset = 0.44f;
 
     public abstract boolean isAdvancedMachine();
+
+    protected ExtruderConfigs.TierConfig getTierConfig() {
+        return isAdvancedMachine()
+                ? ModConfigs.server().mechanicalExtruder.brass
+                : ModConfigs.server().mechanicalExtruder.andesite;
+    }
 
     // Output inventory that only accepts items produced internally by the extruder.
     // insertItem is overridden to reject all external insertion - extraction is allowed.
@@ -104,7 +110,7 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
                 .forRecipes();
         behaviours.add(filtering);
 
-        int cycleTime = ModConfigs.server().mechanicalExtruder.cycleTime.get();
+        int cycleTime = getTierConfig().cycleTime.get();
 
         extrudingBehaviour = new CycleBehavior(this, cycleTime, true);
         behaviours.add(extrudingBehaviour);
@@ -140,29 +146,32 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
 
         if (!output.isEmpty()) {
             if (isAdvancedMachine()) {
-                int multiplier = ModConfigs.server().mechanicalExtruder.brassOutputMultiplier.get();
+                int multiplier = ((ExtruderConfigs.BrassTierConfig) getTierConfig()).outputMultiplier.get();
                 output.setCount(output.getCount() * multiplier);
             }
 
-            if (outputInventory.getStackInSlot(0).isEmpty()) {
-                outputInventory.setStackInSlot(0, output);
-            } else if (outputInventory.getStackInSlot(0).is(output.getItem())) {
-                int newCount = outputInventory.getStackInSlot(0).getCount() + output.getCount();
-                ItemStack merged = output.copy();
-                merged.setCount(Math.min(newCount, outputInventory.getStackInSlot(0).getMaxStackSize()));
-                outputInventory.setStackInSlot(0, merged);
-            } else {
+            ItemStack current = outputInventory.getStackInSlot(0);
+            if (!current.isEmpty() && !current.is(output.getItem()))
                 return false;
+            if (current.getCount() + output.getCount() > current.getMaxStackSize())
+                return false;
+
+            if (current.isEmpty()) {
+                outputInventory.setStackInSlot(0, output);
+            } else {
+                ItemStack merged = output.copy();
+                merged.setCount(current.getCount() + output.getCount());
+                outputInventory.setStackInSlot(0, merged);
             }
         }
 
         if (isAdvancedMachine()) {
-            for (BlockPredicate blockPredicate : extrudingRecipe.getConsumeBlocksList()) {
-                if (blockPredicate.matches(getLeftBlockInWorld()))
-                    consumeBlock(getLeftBlockInWorld());
-                if (blockPredicate.matches(getRightBlockInWorld()))
-                    consumeBlock(getRightBlockInWorld());
-            }
+            Couple<BlockInWorld> sides = getSideBlocks();
+            Couple<Boolean> toConsume = extrudingRecipe.getBlocksToConsume(sides);
+            if (toConsume.getFirst())
+                consumeBlock(sides.getFirst());
+            if (toConsume.getSecond())
+                consumeBlock(sides.getSecond());
         }
 
         return true;
@@ -291,7 +300,7 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
             return false;
         int outputCount = recipe.getResult().getStack().getCount();
         if (isAdvancedMachine()) {
-            outputCount *= ModConfigs.server().mechanicalExtruder.brassOutputMultiplier.get();
+            outputCount *= ((ExtruderConfigs.BrassTierConfig) getTierConfig()).outputMultiplier.get();
         }
         return stack.getCount() + outputCount <= stack.getMaxStackSize();
     }

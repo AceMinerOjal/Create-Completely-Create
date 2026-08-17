@@ -5,7 +5,7 @@
       "item": "minecraft:cut_copper_stairs"
     },
     {
-      "type": "fluid_stack",
+      "type": "neoforge:single",
       "amount": 250,
       "fluid": "minecraft:water"
     }

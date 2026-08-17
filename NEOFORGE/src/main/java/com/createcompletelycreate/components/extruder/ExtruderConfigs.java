@@ -3,18 +3,63 @@ package com.createcompletelycreate.components.extruder;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class ExtruderConfigs {
-    public final ModConfigSpec.IntValue cycleTime;
-    public final ModConfigSpec.IntValue brassOutputMultiplier;
+    public final TierConfig andesite;
+    public final BrassTierConfig brass;
 
     public ExtruderConfigs(ModConfigSpec.Builder builder) {
-        builder.comment("Mechanical Extruder Configs")
-                .push("block_expeller.v1");
+        builder.comment("Mechanical Extruder settings.",
+                        "Configure each tier independently.")
+                .push("block_expeller");
 
-        cycleTime = builder.comment("Duration of the extruding cycle, in ticks.")
-                .defineInRange("cycleTime", 240, 1, 72000);
-        brassOutputMultiplier = builder.comment("Output multiplier for brass extruder")
-                .defineInRange("brassOutputMultiplier", 8, 1, 64);
+        andesite = new TierConfig(builder, "andesite",
+                "Andesite Extruder — the basic tier.",
+                240, 4.0);
+
+        brass = new BrassTierConfig(builder, "brass",
+                "Brass Extruder — advanced tier with higher output and faster cycles.",
+                120, 16.0);
 
         builder.pop();
+    }
+
+    public static class TierConfig {
+        public final ModConfigSpec.IntValue cycleTime;
+        public final ModConfigSpec.DoubleValue stressImpact;
+
+        public TierConfig(ModConfigSpec.Builder builder, String name,
+                          String comment,
+                          int defaultCycle, double defaultImpact) {
+            builder.comment(comment).push(name);
+
+            cycleTime = builder
+                    .comment("Cycle duration in ticks. 20 ticks = 1 second.",
+                             "Default: " + defaultCycle + " (" + (defaultCycle / 20) + "s)")
+                    .defineInRange("cycleTime", defaultCycle, 1, 72000);
+
+            stressImpact = builder
+                    .comment("Stress impact in Stress Units (SU).",
+                             "Doubled for every speed increase the machine receives.",
+                             "Default: " + defaultImpact)
+                    .defineInRange("stressImpact", defaultImpact, 0.0, 1024.0);
+
+            builder.pop();
+        }
+    }
+
+    public static class BrassTierConfig extends TierConfig {
+        public final ModConfigSpec.IntValue outputMultiplier;
+
+        public BrassTierConfig(ModConfigSpec.Builder builder, String name,
+                               String comment,
+                               int defaultCycle, double defaultImpact) {
+            super(builder, name, comment, defaultCycle, defaultImpact);
+
+            builder.push(name);
+            outputMultiplier = builder
+                    .comment("Output item count multiplier per cycle.",
+                             "Default: " + 8)
+                    .defineInRange("outputMultiplier", 8, 1, 256);
+            builder.pop();
+        }
     }
 }

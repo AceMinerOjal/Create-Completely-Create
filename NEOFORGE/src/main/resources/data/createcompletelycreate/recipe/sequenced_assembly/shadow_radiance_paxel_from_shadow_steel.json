@@ -1,0 +1,150 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "createqol"
+    },
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.sequenced_assembly"
+    },
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "compat.paxels"
+    }
+  ],
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "createcompletelycreate:shadow_steel_paxel"
+  },
+  "transitional_item": {
+    "item": {
+      "id": "createcompletelycreate:shadow_steel_paxel"
+    }
+  },
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "createcompletelycreate:shadow_steel_paxel"
+        }
+      ],
+      "results": [
+        {
+          "item": {
+            "id": "createcompletelycreate:shadow_steel_paxel"
+          }
+        }
+      ],
+      "processing_time": 50
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createcompletelycreate:shadow_steel_paxel"
+        },
+        {
+          "item": "createcompletelycreate:refined_radiance_paxel"
+        }
+      ],
+      "results": [
+        {
+          "item": {
+            "id": "createcompletelycreate:shadow_steel_paxel"
+          }
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createcompletelycreate:shadow_steel_paxel"
+        }
+      ],
+      "results": [
+        {
+          "item": {
+            "id": "createcompletelycreate:shadow_steel_paxel"
+          }
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createcompletelycreate:shadow_steel_paxel"
+        },
+        {
+          "item": "createqol:shadow_radiance_block"
+        }
+      ],
+      "results": [
+        {
+          "item": {
+            "id": "createcompletelycreate:shadow_steel_paxel"
+          }
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createcompletelycreate:shadow_steel_paxel"
+        },
+        {
+          "item": "createqol:shadow_radiance_block"
+        }
+      ],
+      "results": [
+        {
+          "item": {
+            "id": "createcompletelycreate:shadow_steel_paxel"
+          }
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "createcompletelycreate:shadow_steel_paxel"
+        },
+        {
+          "item": "createqol:shadow_radiance_block"
+        }
+      ],
+      "results": [
+        {
+          "item": {
+            "id": "createcompletelycreate:shadow_steel_paxel"
+          }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": {
+        "id": "createcompletelycreate:shadow_radiance_paxel"
+      }
+    }
+  ],
+  "loops": 1,
+  "copied_components": [
+    "minecraft:enchantments",
+    "minecraft:custom_name",
+    "createqol:item_tooltips",
+    "createqol:reach",
+    "createqol:digging",
+    "createqol:vein_mine",
+    "createqol:tree_decapitation",
+    "createqol:casingifier",
+    "createqol:smelting",
+    "createcompletelycreate:paxel_active_toggle"
+  ]
+}

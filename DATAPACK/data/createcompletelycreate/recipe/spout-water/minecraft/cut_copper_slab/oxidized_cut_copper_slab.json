@@ -5,7 +5,7 @@
       "item": "minecraft:weathered_cut_copper_slab"
     },
     {
-      "type": "fluid_stack",
+      "type": "neoforge:single",
       "amount": 250,
       "fluid": "minecraft:water"
     }

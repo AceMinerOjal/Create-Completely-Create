@@ -44,11 +44,19 @@ Enhance progression with smarter resource recipes:
 
 - Crimsite + lava/netherrack mixing
 
-- Azureine splashing
+- Asurine mixing
 
 - Wart milling
 
 - More logical stone and ore handling
+
+- Haunting: End Stone → Prismarine
+
+- Crushing: Prismarine → Lapis Lazuli
+
+- Superheated Mixing: Blackstone + Sandstone → End Stone
+
+- Tuff compacting: Diorite + Flint + Lava → Tuff
 
 ### 🍏 Special & Rare Items
 
@@ -57,6 +65,16 @@ Create-style automation for valuable items, including:
 - Golden apple enhancements
 
 ## 🔧 MOD ONLY FEATURES
+
+### Paxel Tools (requires Create: Quality of Life)
+
+Three multitools gated behind [Create: Quality of Life](https://modrinth.com/mod/createqol) (compile-only optional dependency; nothing is registered if createqol is not installed).
+
+- **Shadow Steel Paxel**: Digging (3x3x3), Tree Decapitation, Reach
+- **Refined Radiance Paxel**: Vein Mine, Casingifier, Smelting, Reach
+- **Shadow Radiance Paxel**: Digging, Vein Mine, Casingifier, Tree Decapitation, Smelting, Reach
+
+Paxels are combined pickaxe + axe + shovel multitools. Abilities are toggled in-hand (sneak + right-click cycles, right-click toggles). Shadow Radiance Paxel is crafted via sequenced assembly from either base paxel.
 
 ### Credits and Licensing
 
@@ -126,27 +144,26 @@ Full JEI support with animated machine previews, recipe tooltips, and catalyst r
 
 ### Config Options
 
-The server config (`createcompletelycreate-server.toml`) is editable in-game from the pause menu via the Create-style config screen.
+The server config (`createcompletelycreate-server.toml`) is edited via NeoForge's default config screen.
 
-| Option                           | Default     | Description                             |
-| -------------------------------- | ----------- | --------------------------------------- |
-| `block_expeller.v1.cycleTime`    | 240 ticks (12s) | Duration of one extruding cycle     |
-| `block_expeller.v1.brassOutputMultiplier` | 8 | Output multiplier for the brass variant |
-| `recipes.<category>`             | true        | Toggle a whole recipe category (compacting, crafting, crushing, cutting, extruding, haunting, mechanical_crafting, milling, mixing, pressing, splashing, spout-water) |
-| `extruding.<recipe>`             | true        | Toggle an individual extruding recipe (cobblestone, stone, limestone, scoria, obsidian, snow_block, basalt, calcite) |
-| `impact.<block>`                 | per block   | Configure the individual stress impact of mechanical blocks |
+| Option                                      | Default          | Description                             |
+| ------------------------------------------- | ---------------- | --------------------------------------- |
+| `block_expeller.andesite.cycleTime`         | 240 ticks (12s)  | Duration of one andesite extruding cycle |
+| `block_expeller.brass.cycleTime`            | 240 ticks (12s)  | Duration of one brass extruding cycle    |
+| `block_expeller.brass.outputMultiplier`     | 8                | Output multiplier for the brass variant |
+| `recipes.<category>`                        | true             | Toggle a whole recipe category (compacting, compacting_slabs, compacting_stairs, crafting, crushing, cutting, cutting_woods, extruding, haunting, mechanical_crafting, mechanical_crafting_stairs, milling, mixing, pressing, sequenced_assembly, splashing, spout_water, copper_oxidation) |
+| `extruding.<recipe>`                        | true             | Toggle an individual extruding recipe (cobblestone, stone, limestone, scoria, obsidian, snow_block, basalt, calcite) |
+| `compat.paxels`                             | true             | Enable/disable paxel tools (requires createqol, game restart to take effect) |
+| `impact.<block>`                            | per block        | Configure the individual stress impact of mechanical blocks |
 
 ### 🎯 Designed With Balance in Mind
 
 All recipes are crafted to be:
 
-### 🌱 Vanilla-friendly
-
-### ⚙️ True to Create's style
-
-### 🔧 Reasonably gated behind proper machinery
-
-### 📦 Fully compatible with modpacks
+- **Vanilla-friendly**
+- **True to Create's style**
+- **Reasonably gated behind proper machinery**
+- **Fully compatible with modpacks**
 
 ## 🙌 Why Use This Addon?
 

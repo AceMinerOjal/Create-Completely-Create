@@ -1,0 +1,20 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "createcompletelycreate:config_enabled",
+      "path": "recipes.crushing"
+    }
+  ],
+  "type": "create:crushing",
+  "processing_time": 300,
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:lapis_lazuli"
+    }
+  ]
+}

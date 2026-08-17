@@ -16,13 +16,12 @@
     },
     "S": {
       "item": "create:shaft"
+    },
+    "I": {
+      "tag": "c:plates/iron"
     }
   },
-  "pattern": [
-    " S ",
-    "GAG",
-    " G "
-  ],
+  "pattern": [" S ", "GAG", " I "],
   "result": {
     "count": 1,
     "id": "createcompletelycreate:block_expeller"

@@ -5,7 +5,7 @@
       "item": "create:weathered_copper_tile_slab"
     },
     {
-      "type": "fluid_stack",
+      "type": "neoforge:single",
       "amount": 250,
       "fluid": "minecraft:water"
     }

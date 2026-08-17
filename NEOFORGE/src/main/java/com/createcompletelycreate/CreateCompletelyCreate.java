@@ -2,6 +2,8 @@ package com.createcompletelycreate;
 
 import com.createcompletelycreate.components.extruder.andesite.ExtruderBlockEntity;
 import com.createcompletelycreate.components.extruder.brass.BrassExtruderBlockEntity;
+import com.createcompletelycreate.compat.qol.ModPaxels;
+import com.createcompletelycreate.compat.qol.PaxelAbilityEvents;
 import com.createcompletelycreate.foundation.register.ModRecipeRequirementTypes;
 import com.createcompletelycreate.infrastructure.config.ModConfigs;
 import com.createcompletelycreate.infrastructure.data.ModDataGen;
@@ -10,13 +12,12 @@ import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.item.ItemDescription;
 import com.simibubi.create.foundation.item.KineticStats;
 import com.simibubi.create.foundation.item.TooltipModifier;
-import net.createmod.catnip.config.ui.BaseConfigScreen;
 import net.createmod.catnip.lang.FontHelper;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.fml.ModList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,16 +43,20 @@ public class CreateCompletelyCreate {
         REGISTRATE.registerEventListeners(modEventBus);
 
         ModBlocks.register();
+        ModDataComponents.register(modEventBus);
         ModBlockEntities.register();
         ModCreativeTabs.register(modEventBus);
         ModConfigs.register(modContainer);
         ModConfigs.registerConditionCodecs(modEventBus);
 
-        Supplier<IConfigScreenFactory> configScreen = () -> (container, parent) -> new BaseConfigScreen(parent, MODID);
-        modContainer.registerExtensionPoint(IConfigScreenFactory.class, configScreen);
-
         ModRecipes.register(modEventBus);
         ModRecipeRequirementTypes.init();
+
+        if (ModList.get().isLoaded("createqol") && ModConfigs.startup().paxels.get()) {
+            ModPaxels.register();
+            PaxelAbilityEvents.register();
+        }
+
         modEventBus.addListener(ModDataGen::gatherData);
         modEventBus.addListener(this::registerCapabilities);
         modEventBus.addListener(this::doClientStuff);

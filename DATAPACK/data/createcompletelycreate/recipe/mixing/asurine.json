@@ -1,0 +1,27 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "item": "minecraft:prismarine_shards"
+    },
+    {
+      "fluid": "minecraft:water",
+      "type": "neoforge:single",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "create:asurine"
+    }
+  ]
+}

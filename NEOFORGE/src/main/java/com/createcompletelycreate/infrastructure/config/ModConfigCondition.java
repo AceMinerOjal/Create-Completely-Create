@@ -24,10 +24,19 @@ public class ModConfigCondition implements ICondition {
 
 	@Override
 	public boolean test(IContext context) {
-		ModConfigSpec spec = ModConfigs.serverSpec();
+		Boolean server = value(ModConfigs.serverSpec(), path);
+		if (server != null) return server;
+		Boolean startup = value(ModConfigs.startupSpec(), path);
+		if (startup != null) return startup;
+		return true;
+	}
+
+	private static Boolean value(ModConfigSpec spec, String path) {
 		if (spec == null || !spec.isLoaded())
-			return true;
-		return spec.getValues().getOrElse(path, true);
+			return null;
+		if (spec.getValues().get(path) instanceof ModConfigSpec.ConfigValue<?> configValue)
+			return Boolean.TRUE.equals(configValue.get());
+		return null;
 	}
 
 	@Override

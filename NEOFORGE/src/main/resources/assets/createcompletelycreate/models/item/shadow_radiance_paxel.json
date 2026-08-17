@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "createcompletelycreate:item/shadow_radiance_paxel"
+  }
+}

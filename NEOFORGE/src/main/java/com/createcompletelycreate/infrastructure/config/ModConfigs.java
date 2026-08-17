@@ -22,6 +22,9 @@ public class ModConfigs {
 
     private static ModConfigServer server;
     private static ModConfigSpec serverSpec;
+    private static ModConfigStartup startup;
+    private static ModConfigSpec startupSpec;
+    private static ModStress stressValues;
 
     public static ModConfigServer server() {
         return server;
@@ -31,14 +34,28 @@ public class ModConfigs {
         return serverSpec;
     }
 
+    public static ModConfigStartup startup() {
+        return startup;
+    }
+
+    public static ModConfigSpec startupSpec() {
+        return startupSpec;
+    }
+
     public static void register(ModContainer container) {
         Pair<ModConfigServer, ModConfigSpec> pair = new ModConfigSpec.Builder().configure(ModConfigServer::new);
         server = pair.getLeft();
         serverSpec = pair.getRight();
 
-        container.registerConfig(ModConfig.Type.SERVER, serverSpec);
+        Pair<ModConfigStartup, ModConfigSpec> startupPair = new ModConfigSpec.Builder().configure(ModConfigStartup::new);
+        startup = startupPair.getLeft();
+        startupSpec = startupPair.getRight();
 
-        BlockStressValues.IMPACTS.registerProvider(server.stressValues::getImpact);
+        container.registerConfig(ModConfig.Type.SERVER, serverSpec);
+        container.registerConfig(ModConfig.Type.STARTUP, startupSpec);
+
+        stressValues = new ModStress(server.mechanicalExtruder);
+        BlockStressValues.IMPACTS.registerProvider(stressValues::getImpact);
     }
 
     public static void registerConditionCodecs(IEventBus eventBus) {

@@ -2,7 +2,7 @@
   "neoforge:conditions": [
     {
       "type": "createcompletelycreate:config_enabled",
-      "path": "recipes.spout-water"
+      "path": "recipes.copper_oxidation"
     }
   ],
   "type": "create:filling",
@@ -11,7 +11,7 @@
       "item": "minecraft:chiseled_copper"
     },
     {
-      "type": "fluid_stack",
+      "type": "neoforge:single",
       "amount": 250,
       "fluid": "minecraft:water"
     }

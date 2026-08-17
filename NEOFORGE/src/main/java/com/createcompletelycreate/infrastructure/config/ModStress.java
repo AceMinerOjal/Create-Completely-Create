@@ -1,53 +1,37 @@
 package com.createcompletelycreate.infrastructure.config;
 
-import com.createcompletelycreate.ModConstants;
-import com.tterrag.registrate.builders.BlockBuilder;
-import com.tterrag.registrate.util.nullness.NonNullUnaryOperator;
-import it.unimi.dsi.fastutil.objects.Object2DoubleMap;
-import it.unimi.dsi.fastutil.objects.Object2DoubleOpenHashMap;
+import com.createcompletelycreate.components.extruder.ExtruderConfigs;
+import com.createcompletelycreate.register.ModBlocks;
 import net.createmod.catnip.registry.RegisteredObjectsHelper;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.ModConfigSpec;
-import net.neoforged.neoforge.common.ModConfigSpec.Builder;
-import net.neoforged.neoforge.common.ModConfigSpec.ConfigValue;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.DoubleSupplier;
 
+/**
+ * Registers stress impact values for this mod's kinetic blocks
+ * with Create's stress API. Values are read from {@link ExtruderConfigs}
+ * at runtime.
+ */
 public class ModStress {
-	private static final Object2DoubleMap<ResourceLocation> DEFAULT_IMPACTS = new Object2DoubleOpenHashMap<>();
+    private final Map<ResourceLocation, DoubleSupplier> impacts = new HashMap<>();
 
-	protected final Map<ResourceLocation, ConfigValue<Double>> impacts = new HashMap<>();
+    public ModStress(ExtruderConfigs configs) {
+        registerImpact(ModBlocks.BLOCK_EXPELLER, configs.andesite.stressImpact::get);
+        registerImpact(ModBlocks.BRASS_BLOCK_EXPELLER, configs.brass.stressImpact::get);
+    }
 
-	public ModStress(Builder builder) {
-		builder.comment(".", Comments.su, Comments.impact)
-				.push("impact");
-		DEFAULT_IMPACTS.forEach((id, value) -> this.impacts.put(id, builder.define(id.getPath(), value)));
-		builder.pop();
-	}
+    private void registerImpact(DeferredHolder<?, ?> holder, DoubleSupplier supplier) {
+        impacts.put(holder.getKey().location(), supplier);
+    }
 
-	@Nullable
-	public DoubleSupplier getImpact(Block block) {
-		ResourceLocation id = RegisteredObjectsHelper.getKeyOrThrow(block);
-		ConfigValue<Double> value = this.impacts.get(id);
-		return value == null ? null : value::get;
-	}
-
-	public static <B extends Block, P> NonNullUnaryOperator<BlockBuilder<B, P>> setImpact(double value) {
-		return builder -> {
-			ResourceLocation id = ModConstants.asResource(builder.getName());
-			DEFAULT_IMPACTS.put(id, value);
-			return builder;
-		};
-	}
-
-	private static class Comments {
-		static String su = "[in Stress Units]";
-		static String impact =
-				"Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.";
-	}
-
+    @Nullable
+    public DoubleSupplier getImpact(Block block) {
+        ResourceLocation id = RegisteredObjectsHelper.getKeyOrThrow(block);
+        return impacts.get(id);
+    }
 }

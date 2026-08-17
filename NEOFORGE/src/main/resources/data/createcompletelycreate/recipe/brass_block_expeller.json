@@ -18,6 +18,12 @@
     "M": {
       "item": "create:precision_mechanism"
     },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    },
     "P": {
       "tag": "c:plates/brass"
     },
@@ -25,12 +31,7 @@
       "item": "create:framed_glass_trapdoor"
     }
   },
-  "pattern": [
-    "MGM",
-    "PGP",
-    "TCT",
-    "PTP"
-  ],
+  "pattern": [" MGM ", "NPGPN", " TCT ", " PSP "],
   "result": {
     "count": 1,
     "id": "createcompletelycreate:brass_block_expeller"

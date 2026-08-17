@@ -9,51 +9,87 @@ import java.util.Map;
 
 public class ModConfigServer {
     public final ExtruderConfigs mechanicalExtruder;
-    public final ModStress stressValues;
 
     private final Map<String, BooleanValue> recipeToggles = new LinkedHashMap<>();
     private final Map<String, BooleanValue> extrudingRecipeToggles = new LinkedHashMap<>();
 
     public ModConfigServer(ModConfigSpec.Builder builder) {
         mechanicalExtruder = new ExtruderConfigs(builder);
-        stressValues = new ModStress(builder);
 
+        // ─── Recipe Categories ─────────────────────────────────────
+        // Each category and sub-category can be independently toggled.
+        // Disabled categories are removed from the recipe registry.
         builder.comment(
-                        "Whether each recipe category added by this mod is enabled.",
-                        "Disabled categories are removed from the recipe registry and can no longer be crafted."
-                )
-                .push("recipes");
+                "Recipe categories added by this mod.",
+                "Each category can be independently enabled or disabled.",
+                "Disabled categories are removed from the recipe registry."
+        ).push("recipes");
 
-        registerRecipeToggle(builder, "compacting");
-        registerRecipeToggle(builder, "crafting");
-        registerRecipeToggle(builder, "crushing");
-        registerRecipeToggle(builder, "cutting");
-        registerRecipeToggle(builder, "extruding");
-        registerRecipeToggle(builder, "haunting");
-        registerRecipeToggle(builder, "mechanical_crafting");
-        registerRecipeToggle(builder, "milling");
-        registerRecipeToggle(builder, "mixing");
-        registerRecipeToggle(builder, "pressing");
-        registerRecipeToggle(builder, "splashing");
-        registerRecipeToggle(builder, "spout-water");
+        // Compacting
+        registerToggle(builder, "compacting");
+        registerToggle(builder, "compacting_slabs");
+        registerToggle(builder, "compacting_stairs");
+
+        // Crafting
+        registerToggle(builder, "crafting");
+
+        // Crushing
+        registerToggle(builder, "crushing");
+
+        // Cutting
+        registerToggle(builder, "cutting");
+        registerToggle(builder, "cutting_woods");
+
+        // Extruding
+        registerToggle(builder, "extruding");
+
+        // Haunting
+        registerToggle(builder, "haunting");
+
+        // Mechanical Crafting
+        registerToggle(builder, "mechanical_crafting");
+        registerToggle(builder, "mechanical_crafting_paxels");
+        registerToggle(builder, "mechanical_crafting_stairs");
+        registerToggle(builder, "mechanical_crafting_trapdoors");
+
+        // Milling
+        registerToggle(builder, "milling");
+
+        // Mixing
+        registerToggle(builder, "mixing");
+
+        // Pressing
+        registerToggle(builder, "pressing");
+
+        // Sequenced Assembly
+        registerToggle(builder, "sequenced_assembly");
+
+        // Splashing
+        registerToggle(builder, "splashing");
+
+        // Spout Water
+        registerToggle(builder, "spout_water");
+        registerToggle(builder, "spout_water_create");
+        registerToggle(builder, "copper_oxidation");
 
         builder.pop();
 
+        // ─── Individual Extruding Recipes ──────────────────────────
+        // Per-recipe toggles. Only apply while 'recipes.extruding' is enabled.
         builder.comment(
-                        "Whether each individual extruding recipe is enabled.",
-                        "These only apply while the 'recipes.extruding' category toggle is enabled.",
-                        "Disabled recipes are removed from the recipe registry and can no longer be extruded."
-                )
-                .push("extruding");
+                "Individual extruding recipe toggles.",
+                "These only apply while the 'recipes.extruding' category is enabled.",
+                "Disabled recipes are removed from the recipe registry."
+        ).push("extruding");
 
-        registerExtrudingRecipeToggle(builder, "cobblestone");
-        registerExtrudingRecipeToggle(builder, "stone");
-        registerExtrudingRecipeToggle(builder, "limestone");
-        registerExtrudingRecipeToggle(builder, "scoria");
-        registerExtrudingRecipeToggle(builder, "obsidian");
-        registerExtrudingRecipeToggle(builder, "snow_block");
-        registerExtrudingRecipeToggle(builder, "basalt");
-        registerExtrudingRecipeToggle(builder, "calcite");
+        registerExtrudingToggle(builder, "cobblestone");
+        registerExtrudingToggle(builder, "stone");
+        registerExtrudingToggle(builder, "limestone");
+        registerExtrudingToggle(builder, "scoria");
+        registerExtrudingToggle(builder, "obsidian");
+        registerExtrudingToggle(builder, "snow_block");
+        registerExtrudingToggle(builder, "basalt");
+        registerExtrudingToggle(builder, "calcite");
 
         builder.pop();
     }
@@ -68,13 +104,15 @@ public class ModConfigServer {
         return toggle == null || toggle.get();
     }
 
-    private void registerRecipeToggle(ModConfigSpec.Builder builder, String category) {
-        recipeToggles.put(category, builder.comment("Enable the '" + category + "' recipe category.")
+    private void registerToggle(ModConfigSpec.Builder builder, String category) {
+        recipeToggles.put(category, builder
+                .comment("Enable the '" + category + "' recipe category.")
                 .define(category, true));
     }
 
-    private void registerExtrudingRecipeToggle(ModConfigSpec.Builder builder, String recipeId) {
-        extrudingRecipeToggles.put(recipeId, builder.comment("Enable the '" + recipeId + "' extruding recipe.")
+    private void registerExtrudingToggle(ModConfigSpec.Builder builder, String recipeId) {
+        extrudingRecipeToggles.put(recipeId, builder
+                .comment("Enable the '" + recipeId + "' extruding recipe.")
                 .define(recipeId, true));
     }
 }

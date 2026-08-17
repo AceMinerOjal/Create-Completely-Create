@@ -6,18 +6,18 @@
     }
   ],
   "type": "create:mixing",
-  "heat_requirement": "heated",
+  "heat_requirement": "superheated",
   "ingredients": [
     {
-      "item": "minecraft:basalt"
+      "item": "minecraft:blackstone"
     },
     {
-      "item": "minecraft:charcoal"
+      "item": "minecraft:sandstone"
     }
   ],
   "results": [
     {
-      "id": "minecraft:gunpowder"
+      "id": "minecraft:end_stone"
     }
   ]
 }

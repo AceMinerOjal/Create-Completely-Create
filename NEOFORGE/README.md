@@ -39,12 +39,24 @@ Full recipe category with animated machine rendering for JEI.
 
 In-game tutorial animations via Create's Ponder system, teaching players how to use the Block Expeller.
 
+### Paxels (Create: Quality of Life)
+
+When [Create: Quality of Life](https://modrinth.com/mod/create-quality-of-life) is installed, three paxels are added - combined **pickaxe + axe + shovel** multitools:
+
+| Paxel | Material | Abilities |
+|-------|----------|-----------|
+| Shadow Steel Paxel | `create:shadow_steel` | Digging (3x3x3), Tree Decapitation, Reach |
+| Refined Radiance Paxel | `create:refined_radiance` | Vein Mine, Casingifier, Smelting, Reach |
+| Shadow Radiance Paxel | `createqol:shadow_radiance` | Digging, Vein Mine, Casingifier, Tree Decapitation, Smelting, Reach |
+
+Abilities are toggled in-hand: **sneak + right-click** cycles the selected ability, **right-click** toggles it. Reach and per-ability toggles can also be configured in createqol's item-config screen. If createqol is not installed, the paxels are not registered.
+
 ## Requirements
 
 | Dependency | Version |
 |------------|---------|
 | Minecraft | 1.21.1 |
-| NeoForge | 21.1.219+ |
+| NeoForge | 21.1.248+ |
 | Create | 6.0.10+ |
 | Flywheel | 1.0.6+ |
 
