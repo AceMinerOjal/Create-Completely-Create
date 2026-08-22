@@ -2,6 +2,9 @@
   "values": [
     "minecraft:campfire",
     "minecraft:fire",
-    "create_connected:fan_smoking_catalyst"
+    {
+      "id": "create_connected:fan_smoking_catalyst",
+      "required": false
+    }
   ]
 }

@@ -122,8 +122,10 @@ public class PaxelItem extends TieredItem implements QOLConfigurableItem {
 
     @Override
     public <T extends LivingEntity> int damageItem(ItemStack stack, int amount, T entity, Consumer<Item> onBroken) {
+        // canAbsorbDamage consumes air scaled against max durability (like QoL's basic
+        // tools); passing the per-event damage amount would cost 900 air per hit.
         if (CreateQOLConfigs.server().equipments.useAir.get()
-                && BacktankUtil.canAbsorbDamage(entity, amount)) {
+                && BacktankUtil.canAbsorbDamage(entity, stack.getMaxDamage())) {
             return 0;
         }
         return super.damageItem(stack, amount, entity, onBroken);

@@ -1,5 +1,25 @@
 # Changelog - Create: Completely Create
 
+## v2.2.1
+
+### Bug Fixes
+
+- Fixed brass expellers never producing output while the output slot is empty: NeoForge's `ItemStack.EMPTY.getMaxStackSize()` returns 1 (no MAX_STACK_SIZE component), so every multiplied insertion was rejected as exceeding the stack limit; capacity checks now measure against the recipe result stack
+- Output-space validation now accounts for the full multiplied output even when the output slot is empty
+- Fixed extruders accepting flowing liquids as water/lava/ice equivalents; only source blocks count now (applies to side ingredients, catalysts, and blocks consumed by advanced recipes)
+- Fixed paxels draining a full backtank of air (900) per durability point instead of 1; air cost is now scaled against the tool's max durability, matching createqol's basic tools
+- Fixed extruding block tags failing to load when Create: Connected or Create: Aeronautics are not installed — cross-mod entries are now optional (`"required": false`), unblocking all extruding recipes
+- Fixed brass `outputMultiplier` being defined at a doubled config path (`block_expeller.brass.outputMultiplier.outputMultiplier`); it now lives at `block_expeller.brass.outputMultiplier`
+- The Config button on the Mods list screen is now clickable and opens NeoForge's built-in config screen
+
+### Changes
+
+- Extruder output inventory is now accessible from all sides (was extraction-from-below only)
+- Brass extruder default cycle time reverted to 240 ticks
+- Added COMMON config type registration (`createcompletelycreate-common.toml`, currently empty)
+
+---
+
 ## v2.2.0
 
 ### New Features (MOD ONLY)

@@ -22,6 +22,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.pattern.BlockInWorld;
+import net.minecraft.world.level.material.FluidState;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -75,7 +76,16 @@ public class ExtrudingRecipe implements Recipe<RecipeInput> {
         return Optional.empty();
     }
 
+    // Block tags and predicates match by block identity, so flowing liquids share the
+    // same block as their source. Require a source (or non-liquid) state for ingredients.
+    private static boolean isUsableIngredient(BlockInWorld blockInWorld) {
+        FluidState fluid = blockInWorld.getState().getFluidState();
+        return fluid.isEmpty() || fluid.isSource();
+    }
+
     private boolean matchIngredient(BlockPredicate blockIngredient, BlockInWorld blockInWorld) {
+        if (!isUsableIngredient(blockInWorld))
+            return false;
         if (blockIngredient.blocks().isEmpty())
             return blockIngredient.matches(blockInWorld);
         if (blockInWorld.getState().hasProperty(WATERLOGGED) && blockInWorld.getState().getValue(WATERLOGGED)) {
@@ -115,7 +125,8 @@ public class ExtrudingRecipe implements Recipe<RecipeInput> {
             return false;
         if (!matchIngredients(extruderBlockEntity, this.getBlockPredicateIngredients()))
             return false;
-        if (this.catalyst.blocks().isPresent() && !this.catalyst.matches(extruderBlockEntity.getCatalystBlock()))
+        BlockInWorld catalystBlock = extruderBlockEntity.getCatalystBlock();
+        if (this.catalyst.blocks().isPresent() && (!isUsableIngredient(catalystBlock) || !this.catalyst.matches(catalystBlock)))
             return false;
         return true;
     }

@@ -24,6 +24,8 @@ public class ModConfigs {
     private static ModConfigSpec serverSpec;
     private static ModConfigStartup startup;
     private static ModConfigSpec startupSpec;
+    private static ModConfigCommon common;
+    private static ModConfigSpec commonSpec;
     private static ModStress stressValues;
 
     public static ModConfigServer server() {
@@ -51,7 +53,12 @@ public class ModConfigs {
         startup = startupPair.getLeft();
         startupSpec = startupPair.getRight();
 
+        Pair<ModConfigCommon, ModConfigSpec> commonPair = new ModConfigSpec.Builder().configure(ModConfigCommon::new);
+        common = commonPair.getLeft();
+        commonSpec = commonPair.getRight();
+
         container.registerConfig(ModConfig.Type.SERVER, serverSpec);
+        container.registerConfig(ModConfig.Type.COMMON, commonSpec);
         container.registerConfig(ModConfig.Type.STARTUP, startupSpec);
 
         stressValues = new ModStress(server.mechanicalExtruder);

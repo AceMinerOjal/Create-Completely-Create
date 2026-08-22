@@ -1,6 +1,12 @@
 {
   "values": [
-    "aeronautics:levitite_blend",
-    "aeronautics:levitite"
+    {
+      "id": "aeronautics:levitite_blend",
+      "required": false
+    },
+    {
+      "id": "aeronautics:levitite",
+      "required": false
+    }
   ]
 }

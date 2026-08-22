@@ -131,9 +131,8 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
     @Override
     public boolean tryProcess(boolean simulate) {
         Optional<ExtrudingRecipe> recipe = getRecipe();
-        if (recipe.isEmpty()) {
+        if (recipe.isEmpty())
             return false;
-        }
         ExtrudingRecipe extrudingRecipe = recipe.get();
 
         if (!hasEnoughOutputSpace(extrudingRecipe))
@@ -153,7 +152,10 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
             ItemStack current = outputInventory.getStackInSlot(0);
             if (!current.isEmpty() && !current.is(output.getItem()))
                 return false;
-            if (current.getCount() + output.getCount() > current.getMaxStackSize())
+            // Measure capacity against the rolled output stack: ItemStack.EMPTY reports a
+            // max size of 1 on NeoForge (no MAX_STACK_SIZE component), which would wrongly
+            // reject any multi-count insertion into an empty slot.
+            if (current.getCount() + output.getCount() > output.getMaxStackSize())
                 return false;
 
             if (current.isEmpty()) {
@@ -293,16 +295,20 @@ public abstract class AbstractExtruderBlockEntity extends KineticBlockEntity imp
     }
 
     public boolean hasEnoughOutputSpace(ExtrudingRecipe recipe) {
-        ItemStack stack = outputInventory.getStackInSlot(0);
-        if (stack.isEmpty())
-            return true;
-        if (!stack.is(recipe.getResult().getStack().getItem()))
-            return false;
-        int outputCount = recipe.getResult().getStack().getCount();
+        ItemStack template = recipe.getResult().getStack();
+        int outputCount = template.getCount();
         if (isAdvancedMachine()) {
             outputCount *= ((ExtruderConfigs.BrassTierConfig) getTierConfig()).outputMultiplier.get();
         }
-        return stack.getCount() + outputCount <= stack.getMaxStackSize();
+
+        ItemStack stack = outputInventory.getStackInSlot(0);
+        if (stack.isEmpty())
+            // Validate against the result stack: an empty stored slot reports a max
+            // size of 1 on NeoForge, so it cannot serve as the capacity reference.
+            return outputCount <= template.getMaxStackSize();
+        if (!stack.is(template.getItem()))
+            return false;
+        return stack.getCount() + outputCount <= template.getMaxStackSize();
     }
 
     public boolean matchesIngredients(ExtrudingRecipe extrudingRecipe) {

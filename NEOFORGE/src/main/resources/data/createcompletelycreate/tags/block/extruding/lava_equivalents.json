@@ -1,7 +1,13 @@
 {
   "values": [
     "minecraft:lava",
-    "create_connected:fan_blasting_catalyst",
-    "create_connected:fan_seething_catalyst"
+    {
+      "id": "create_connected:fan_blasting_catalyst",
+      "required": false
+    },
+    {
+      "id": "create_connected:fan_seething_catalyst",
+      "required": false
+    }
   ]
 }

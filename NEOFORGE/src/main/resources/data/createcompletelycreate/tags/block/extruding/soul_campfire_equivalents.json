@@ -2,6 +2,9 @@
   "values": [
     "minecraft:soul_campfire",
     "minecraft:soul_fire",
-    "create_connected:fan_haunting_catalyst"
+    {
+      "id": "create_connected:fan_haunting_catalyst",
+      "required": false
+    }
   ]
 }

@@ -34,8 +34,10 @@ public class ModConfigCondition implements ICondition {
 	private static Boolean value(ModConfigSpec spec, String path) {
 		if (spec == null || !spec.isLoaded())
 			return null;
-		if (spec.getValues().get(path) instanceof ModConfigSpec.ConfigValue<?> configValue)
-			return Boolean.TRUE.equals(configValue.get());
+		Object val = spec.getValues().get(path);
+		// getValues() stores ConfigValue wrappers, not raw values
+		if (val instanceof ModConfigSpec.ConfigValue<?> configValue && configValue.get() instanceof Boolean b)
+			return b;
 		return null;
 	}
 
